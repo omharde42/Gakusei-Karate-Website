@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { 
   Dialog,
@@ -33,11 +32,6 @@ const galleryImages = [
     id: 5, 
     src: "https://images.unsplash.com/photo-1605296866985-34c6bafd2efd?auto=format&fit=crop&q=80",
     alt: "Group class training"
-  },
-  {
-    id: 6, 
-    src: "https://images.unsplash.com/photo-1599586120429-48281b6f0ece?auto=format&fit=crop&q=80",
-    alt: "Breaking demonstration"
   }
 ];
 
