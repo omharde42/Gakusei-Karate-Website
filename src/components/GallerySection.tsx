@@ -6,7 +6,7 @@ import {
   DialogClose,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { Gallery, Image } from "lucide-react";
+import { Image } from "lucide-react";
 
 // Actual dojo gallery images
 const galleryImages = [
@@ -97,7 +97,7 @@ const GallerySection = () => {
         
         <div className="flex justify-center mb-8">
           <div className="inline-flex items-center bg-white px-4 py-2 rounded-full shadow-md">
-            <Gallery className="text-karate-red mr-2 h-5 w-5" />
+            <Image className="text-karate-red mr-2 h-5 w-5" />
             <span className="text-karate-dark font-medium">The Karate Gakusei Dojo Memories</span>
           </div>
         </div>
