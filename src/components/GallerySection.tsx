@@ -88,12 +88,23 @@ const GallerySection = () => {
   return (
     <section id="gallery" className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-karate-red text-center mb-6">
-          Gallery
-        </h2>
-        <p className="text-center text-karate-dark text-lg mb-10 max-w-2xl mx-auto">
-          Explore moments from training, tournaments, and our karate community.
-        </p>
+        <div className="flex flex-col md:flex-row justify-between items-center mb-10">
+          <div>
+            <h2 className="text-3xl md:text-4xl font-bold text-karate-red text-center md:text-left mb-6">
+              Gallery
+            </h2>
+            <p className="text-center md:text-left text-karate-dark text-lg mb-6 max-w-2xl">
+              Explore moments from training, tournaments, and our karate community.
+            </p>
+          </div>
+          <div className="w-40 h-40">
+            <img 
+              src="/lovable-uploads/98bc18da-a8e3-4271-9086-87fef0798538.png" 
+              alt="The Karate Gakusei Dojo Logo" 
+              className="w-full h-full object-contain"
+            />
+          </div>
+        </div>
         
         <div className="flex justify-center mb-8">
           <div className="inline-flex items-center bg-white px-4 py-2 rounded-full shadow-md">
