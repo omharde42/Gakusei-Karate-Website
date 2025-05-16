@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { 
   Dialog,
@@ -5,33 +6,79 @@ import {
   DialogClose,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
+import { Gallery, Image } from "lucide-react";
 
-// Sample gallery images (replace with actual images when available)
+// Actual dojo gallery images
 const galleryImages = [
   {
     id: 1, 
-    src: "https://images.unsplash.com/photo-1599857440084-7230cce3e886?auto=format&fit=crop&q=80",
-    alt: "Students practicing kata"
+    src: "/lovable-uploads/c52765fd-9714-4b11-9152-443a5e107bca.png",
+    alt: "Advanced students with instructor in training hall"
   },
   {
     id: 2, 
-    src: "https://images.unsplash.com/photo-1601588462477-e76b16de79f3?auto=format&fit=crop&q=80",
-    alt: "Karate belt grading ceremony"
+    src: "/lovable-uploads/5f64a387-ff16-448a-aad1-e0ba35e60d86.png",
+    alt: "Children's class group photo with colorful belts"
   },
   {
     id: 3, 
-    src: "https://images.unsplash.com/photo-1555597673-b21d5c935865?auto=format&fit=crop&q=80",
-    alt: "Sensei demonstrating technique"
+    src: "/lovable-uploads/6f2f0b16-2562-4086-b2d7-957c1e80695c.png",
+    alt: "Sensei demonstrating technique with young students"
   },
   {
     id: 4, 
-    src: "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?auto=format&fit=crop&q=80",
-    alt: "Karate tournament"
+    src: "/lovable-uploads/5ffe01fc-e522-443a-b7fe-921cd1b95494.png",
+    alt: "Large group of students with varied belt colors"
   },
   {
     id: 5, 
-    src: "https://images.unsplash.com/photo-1605296866985-34c6bafd2efd?auto=format&fit=crop&q=80",
-    alt: "Group class training"
+    src: "/lovable-uploads/5dd7888a-5f0f-4c39-9b37-771a018f8ff5.png",
+    alt: "Students with trophies after tournament"
+  },
+  {
+    id: 6, 
+    src: "/lovable-uploads/6ab6f917-b470-493e-a1df-29f37346dc6d.png",
+    alt: "Group of yellow belt students with instructor"
+  },
+  {
+    id: 7, 
+    src: "/lovable-uploads/19b7512f-ffa6-4219-8fce-eeafcec1fae2.png",
+    alt: "Tournament match with referee and spectators"
+  },
+  {
+    id: 8, 
+    src: "/lovable-uploads/5ce37402-1abf-4167-909d-b5b9c2a602fe.png",
+    alt: "Young student practicing flexibility exercises"
+  },
+  {
+    id: 9, 
+    src: "/lovable-uploads/5ae16b20-1a02-4677-b9e4-a4cf41ce1829.png",
+    alt: "Black belt practitioners at ninja wall training facility"
+  },
+  {
+    id: 10, 
+    src: "/lovable-uploads/2ef2012a-a717-4dac-9b77-deb6204a878b.png",
+    alt: "Adult and child students with instructor"
+  },
+  {
+    id: 11, 
+    src: "/lovable-uploads/0bbfd234-9e2f-4f6c-9ddb-3e1ad90c36bc.png",
+    alt: "Yellow belt students with instructor showing fighting stance"
+  },
+  {
+    id: 12, 
+    src: "/lovable-uploads/b58f3604-8133-453a-9534-7cd8e00304f7.png",
+    alt: "Advanced class with black belt instructors"
+  },
+  {
+    id: 13, 
+    src: "/lovable-uploads/c470125e-fe55-4a31-9a94-43cbc0b1874e.png",
+    alt: "Students with certificates from karate championship"
+  },
+  {
+    id: 14, 
+    src: "/lovable-uploads/5f1a3294-5be6-4676-a5b6-61cc817a8b01.png",
+    alt: "Adult black belt students with sensei"
   }
 ];
 
@@ -47,6 +94,13 @@ const GallerySection = () => {
         <p className="text-center text-karate-dark text-lg mb-10 max-w-2xl mx-auto">
           Explore moments from training, tournaments, and our karate community.
         </p>
+        
+        <div className="flex justify-center mb-8">
+          <div className="inline-flex items-center bg-white px-4 py-2 rounded-full shadow-md">
+            <Gallery className="text-karate-red mr-2 h-5 w-5" />
+            <span className="text-karate-dark font-medium">The Karate Gakusei Dojo Memories</span>
+          </div>
+        </div>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {galleryImages.map((image) => (
