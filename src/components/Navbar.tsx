@@ -55,17 +55,17 @@ const Navbar = () => {
     <nav 
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 px-6",
-        isScrolled ? "bg-white shadow-md py-2" : "bg-transparent"
+        isScrolled ? "bg-white/95 backdrop-blur-md shadow-lg border-b-2 border-karate-gold py-2" : "bg-transparent"
       )}
     >
       <div className="container mx-auto flex justify-between items-center">
-        <div className="text-karate-red font-bold text-xl md:text-2xl">
+        <div className="text-karate-red font-bold text-xl md:text-2xl font-japanese hover:text-karate-gold transition-colors duration-300">
           The Karate Gakusei Dojo
         </div>
         
         {/* Mobile menu button */}
         <button 
-          className="md:hidden text-karate-red"
+          className="md:hidden text-karate-red hover:text-karate-gold transition-colors duration-300"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
           {mobileMenuOpen ? (
@@ -86,11 +86,15 @@ const Navbar = () => {
               key={item.id}
               onClick={() => scrollToSection(item.id)}
               className={cn(
-                "font-medium text-base hover:text-karate-red transition-colors",
-                activeSection === item.id ? "text-karate-red font-bold" : "text-karate-dark"
+                "font-medium text-base hover:text-karate-gold transition-all duration-300 font-japanese relative group",
+                activeSection === item.id ? "text-karate-red font-bold" : "text-karate-black"
               )}
             >
               {item.label}
+              <span className={cn(
+                "absolute bottom-0 left-0 w-0 h-0.5 bg-karate-gold transition-all duration-300 group-hover:w-full",
+                activeSection === item.id ? "w-full" : ""
+              )}></span>
             </button>
           ))}
         </div>
@@ -98,14 +102,14 @@ const Navbar = () => {
       
       {/* Mobile menu dropdown */}
       {mobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg py-4 px-6 flex flex-col space-y-4">
+        <div className="md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-md shadow-lg py-4 px-6 flex flex-col space-y-4 border-b-2 border-karate-gold">
           {navItems.map(item => (
             <button
               key={item.id}
               onClick={() => scrollToSection(item.id)}
               className={cn(
-                "font-medium text-base hover:text-karate-red transition-colors text-left",
-                activeSection === item.id ? "text-karate-red font-bold" : "text-karate-dark"
+                "font-medium text-base hover:text-karate-gold transition-colors text-left font-japanese",
+                activeSection === item.id ? "text-karate-red font-bold" : "text-karate-black"
               )}
             >
               {item.label}

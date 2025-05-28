@@ -86,54 +86,60 @@ const GallerySection = () => {
   const [selectedImage, setSelectedImage] = useState<typeof galleryImages[0] | null>(null);
 
   return (
-    <section id="gallery" className="py-16 bg-gray-50">
+    <section id="gallery" className="py-16 bg-gradient-to-br from-gray-50 to-karate-lightgold/20">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center mb-10">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-karate-red text-center md:text-left mb-6">
-              Gallery
+            <h2 className="text-3xl md:text-4xl font-bold text-karate-red text-center md:text-left mb-6 font-japanese">
+              ギャラリー - Gallery
             </h2>
-            <p className="text-center md:text-left text-karate-dark text-lg mb-6 max-w-2xl">
+            <p className="text-center md:text-left text-karate-dark text-lg mb-6 max-w-2xl font-japanese font-light">
               Explore moments from training, tournaments, and our karate community.
             </p>
           </div>
-          <div className="w-40 h-40">
+          <div className="w-40 h-40 animate-float">
             <img 
               src="/lovable-uploads/98bc18da-a8e3-4271-9086-87fef0798538.png" 
               alt="The Karate Gakusei Dojo Logo" 
-              className="w-full h-full object-contain"
+              className="w-full h-full object-contain hover:scale-110 transition-transform duration-300"
             />
           </div>
         </div>
         
         <div className="flex justify-center mb-8">
-          <div className="inline-flex items-center bg-white px-4 py-2 rounded-full shadow-md">
+          <div className="inline-flex items-center bg-white px-6 py-3 rounded-full shadow-lg border-2 border-karate-gold hover:shadow-xl transition-shadow duration-300">
             <Image className="text-karate-red mr-2 h-5 w-5" />
-            <span className="text-karate-dark font-medium">The Karate Gakusei Dojo Memories</span>
+            <span className="text-karate-dark font-medium font-japanese">The Karate Gakusei Dojo Memories</span>
           </div>
         </div>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {galleryImages.map((image) => (
+          {galleryImages.map((image, index) => (
             <div 
               key={image.id}
-              className="relative overflow-hidden rounded-lg shadow-md cursor-pointer transform transition-transform hover:scale-105"
+              className="relative overflow-hidden rounded-lg shadow-lg cursor-pointer transform transition-all duration-500 hover:scale-105 hover:shadow-2xl group animate-fadeInUp border-2 border-transparent hover:border-karate-gold"
+              style={{ animationDelay: `${index * 0.1}s` }}
               onClick={() => setSelectedImage(image)}
             >
               <div className="aspect-w-4 aspect-h-3">
                 <img 
                   src={image.src} 
                   alt={image.alt}
-                  className="object-cover w-full h-full"
+                  className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
                   onError={(e) => {
                     const target = e.target as HTMLImageElement;
                     target.src = `https://placehold.co/600x400?text=Karate+Image+${image.id}`;
                   }}
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-20 hover:bg-opacity-40 transition-all flex items-end">
-                  <div className="p-4 w-full text-white bg-gradient-to-t from-black/60 to-transparent">
-                    <p>{image.alt}</p>
+                <div className="absolute inset-0 bg-gradient-to-t from-karate-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-all duration-300">
+                  <div className="absolute bottom-0 left-0 right-0 p-4">
+                    <p className="text-white font-medium font-japanese text-sm transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                      {image.alt}
+                    </p>
                   </div>
+                </div>
+                <div className="absolute top-2 right-2 bg-karate-gold text-karate-black px-2 py-1 rounded-full text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  View
                 </div>
               </div>
             </div>
@@ -142,22 +148,22 @@ const GallerySection = () => {
         
         {/* Image modal/dialog */}
         <Dialog open={!!selectedImage} onOpenChange={(open) => !open && setSelectedImage(null)}>
-          <DialogContent className="max-w-4xl w-[90vw]">
+          <DialogContent className="max-w-4xl w-[90vw] border-2 border-karate-gold">
             {selectedImage && (
               <div className="relative">
                 <img 
                   src={selectedImage.src} 
                   alt={selectedImage.alt} 
-                  className="w-full h-auto rounded"
+                  className="w-full h-auto rounded border-2 border-karate-gold"
                 />
-                <div className="mt-4">
-                  <p className="text-lg font-medium">{selectedImage.alt}</p>
+                <div className="mt-4 bg-gradient-gold p-4 rounded-lg">
+                  <p className="text-lg font-medium font-japanese text-karate-black">{selectedImage.alt}</p>
                 </div>
                 <DialogClose asChild>
                   <Button 
                     variant="outline" 
                     size="icon" 
-                    className="absolute top-2 right-2 rounded-full h-8 w-8 p-0"
+                    className="absolute top-2 right-2 rounded-full h-8 w-8 p-0 bg-karate-gold border-karate-red hover:bg-karate-red hover:text-white transition-colors duration-300"
                   >
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                       <line x1="18" y1="6" x2="6" y2="18"></line>

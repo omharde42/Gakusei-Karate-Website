@@ -3,26 +3,26 @@ const AboutSection = () => {
   return (
     <section id="about" className="py-16 bg-white">
       <div className="container mx-auto px-4 max-w-4xl">
-        <h2 className="text-3xl md:text-4xl font-bold text-karate-red text-center mb-10">
-          About Us
+        <h2 className="text-3xl md:text-4xl font-bold text-karate-red text-center mb-10 font-japanese">
+          私たちについて - About Us
         </h2>
         
         <div className="space-y-6 text-karate-dark">
           <div className="flex flex-col md:flex-row gap-8 items-center mb-8">
             <div className="md:w-1/3 flex justify-center">
-              <div className="relative h-64 w-64">
-                <div className="absolute inset-0 bg-karate-red rounded-full opacity-20"></div>
-                <div className="absolute inset-2 bg-white rounded-full flex items-center justify-center">
+              <div className="relative h-64 w-64 group">
+                <div className="absolute inset-0 bg-gradient-gold rounded-full opacity-30 animate-glow"></div>
+                <div className="absolute inset-2 bg-white rounded-full flex items-center justify-center shadow-xl border-2 border-karate-gold group-hover:scale-105 transition-transform duration-300">
                   <img 
                     src="/lovable-uploads/04d9278d-ac8f-4e64-9cb2-f4c1f731f7dd.png" 
                     alt="The Karate Gakusei Dojo Logo" 
-                    className="h-32 w-32 object-contain"
+                    className="h-32 w-32 object-contain animate-float"
                   />
                 </div>
               </div>
             </div>
             <div className="md:w-2/3">
-              <p className="text-lg leading-relaxed">
+              <p className="text-lg leading-relaxed font-japanese font-light">
                 The Karate Gakusei Dojo is proudly affiliated with the International Shotokan Karate Institute (ISKI), India. 
                 With a strong foundation in traditional Japanese karate philosophy, our dojo emphasizes discipline, respect, 
                 and personal development. Sensei Rizwan Shaikh (Nidan Black Belt) leads the classes with passion and precision.
@@ -30,8 +30,8 @@ const AboutSection = () => {
             </div>
           </div>
           
-          <div className="bg-gradient-to-r from-gray-100 to-gray-200 p-6 rounded-lg shadow-inner">
-            <p className="text-lg leading-relaxed">
+          <div className="bg-gradient-to-r from-karate-lightgold to-white p-6 rounded-lg shadow-lg border-l-4 border-karate-gold hover:shadow-xl transition-shadow duration-300">
+            <p className="text-lg leading-relaxed font-japanese font-light">
               Our dojo is more than just a place to learn how to punch and kick—it's a sanctuary for mental clarity, 
               spiritual growth, and physical strength. We follow the traditional values of Shotokan Karate, 
               integrating them into every aspect of our training. Every class is designed to challenge students 
@@ -41,7 +41,7 @@ const AboutSection = () => {
           
           <div className="flex flex-col md:flex-row gap-8 items-center my-8">
             <div className="md:w-2/3 order-2 md:order-1">
-              <p className="text-lg leading-relaxed">
+              <p className="text-lg leading-relaxed font-japanese font-light">
                 Whether you are a complete beginner or someone returning to martial arts, our welcoming community 
                 will support your journey. We train students of all ages and backgrounds, fostering unity and 
                 encouragement in every class. Through katas, kihon, and kumite, students develop not just their 
@@ -50,14 +50,14 @@ const AboutSection = () => {
               </p>
             </div>
             <div className="md:w-1/3 flex justify-center order-1 md:order-2">
-              <div className="h-48 w-48 bg-karate-red rounded-lg shadow-lg flex items-center justify-center">
-                <div className="text-6xl text-white font-bold">空手</div>
+              <div className="h-48 w-48 bg-gradient-red rounded-lg shadow-lg flex items-center justify-center hover:scale-105 transition-transform duration-300 border-2 border-karate-gold">
+                <div className="text-6xl text-karate-gold font-bold font-japanese animate-glow">空手</div>
               </div>
             </div>
           </div>
           
-          <div className="border-l-4 border-karate-red pl-6">
-            <p className="text-lg leading-relaxed">
+          <div className="border-l-4 border-karate-gold pl-6 bg-gradient-to-r from-karate-lightgold/30 to-transparent p-4 rounded-r-lg">
+            <p className="text-lg leading-relaxed font-japanese font-light">
               Our goal is to shape students into not just excellent martial artists but also responsible and 
               honorable individuals. Join us to discover your inner strength and become part of a dojo that 
               values both tradition and progress.
