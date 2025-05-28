@@ -13,9 +13,11 @@ const AboutSection = () => {
               <div className="relative h-64 w-64">
                 <div className="absolute inset-0 bg-karate-red rounded-full opacity-20"></div>
                 <div className="absolute inset-2 bg-white rounded-full flex items-center justify-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className="h-32 w-32 text-karate-red">
-                    <path fill="currentColor" d="M432 96c26.5 0 48-21.5 48-48S458.5 0 432 0s-48 21.5-48 48 21.5 48 48 48zm-80 96c-26.5 0-48 21.5-48 48s21.5 48 48 48 48-21.5 48-48-21.5-48-48-48zm-128 0c-26.5 0-48 21.5-48 48s21.5 48 48 48 48-21.5 48-48-21.5-48-48-48zM240 0c-26.5 0-48 21.5-48 48s21.5 48 48 48 48-21.5 48-48S266.5 0 240 0zM80 96c26.5 0 48-21.5 48-48S106.5 0 80 0 32 21.5 32 48s21.5 48 48 48zm0 96c-26.5 0-48 21.5-48 48s21.5 48 48 48 48-21.5 48-48-21.5-48-48-48zm432 80c0 26.5-21.5 48-48 48s-48-21.5-48-48 21.5-48 48-48 48 21.5 48 48zm-432 0c0 26.5-21.5 48-48 48s-48-21.5-48-48 21.5-48 48-48 48 21.5 48 48z"/>
-                  </svg>
+                  <img 
+                    src="/lovable-uploads/04d9278d-ac8f-4e64-9cb2-f4c1f731f7dd.png" 
+                    alt="The Karate Gakusei Dojo Logo" 
+                    className="h-32 w-32 object-contain"
+                  />
                 </div>
               </div>
             </div>
