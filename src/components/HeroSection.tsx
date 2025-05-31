@@ -12,6 +12,10 @@ const HeroSection = () => {
     }
   };
 
+  const openGoogleForm = () => {
+    window.open("https://forms.gle/xv3NibM5x2K8hHWE9", "_blank");
+  };
+
   return (
     <section id="home" className="min-h-screen flex flex-col justify-center items-center bg-gradient-karate pt-20 pb-16 px-4 relative overflow-hidden">
       {/* Decorative elements */}
@@ -23,11 +27,11 @@ const HeroSection = () => {
         <div className="mb-8 flex flex-col items-center justify-center animate-fadeInUp">
           {/* Main ISKI Logo - Centered */}
           <div className="mb-4 relative animate-slideIn flex justify-center">
-            <div className="bg-white p-4 rounded-full shadow-xl border-4 border-karate-gold animate-glow">
+            <div className="bg-white p-2 rounded-full shadow-xl border-4 border-karate-gold animate-glow w-32 h-32 flex items-center justify-center">
               <img 
                 src="/lovable-uploads/596add0b-6e8d-49e8-b05d-d51904889b69.png" 
                 alt="ISKI India - International Shotokan Karate Institute" 
-                className="h-24 w-24 object-contain rounded-full hover:scale-110 transition-transform duration-300 mx-auto"
+                className="w-full h-full object-cover rounded-full hover:scale-110 transition-transform duration-300"
               />
             </div>
           </div>
@@ -50,11 +54,11 @@ const HeroSection = () => {
 
           {/* Karate Gakusei Dojo Logo - Centered */}
           <div className="relative animate-slideIn flex justify-center" style={{animationDelay: '0.6s'}}>
-            <div className="bg-white p-3 rounded-full shadow-lg border-2 border-karate-red animate-glow">
+            <div className="bg-white p-2 rounded-full shadow-lg border-2 border-karate-red animate-glow w-28 h-28 flex items-center justify-center">
               <img 
                 src="/lovable-uploads/837f88e6-2182-4535-b125-085a716b02f0.png" 
                 alt="The Karate Gakusei Dojo" 
-                className="h-20 w-20 object-contain rounded-full hover:scale-110 transition-transform duration-300 mx-auto"
+                className="w-full h-full object-cover rounded-full hover:scale-110 transition-transform duration-300"
               />
             </div>
           </div>
@@ -75,7 +79,7 @@ const HeroSection = () => {
 
         {/* Schedule Section - Centered */}
         <div className="bg-gradient-gold text-karate-black font-bold p-6 rounded-lg shadow-xl mb-8 max-w-xl mx-auto border-2 border-karate-gold animate-fadeInUp" style={{animationDelay: '1.5s'}}>
-          <h3 className="text-xl mb-2 font-japanese text-center">🟥 日程 - Schedule 🟥</h3>
+          <h3 className="text-xl mb-2 font-japanese text-center">Schedule</h3>
           <p className="text-lg font-japanese text-center">Monday, Wednesday, Friday — 7:00 PM to 8:00 PM</p>
         </div>
 
@@ -100,7 +104,7 @@ const HeroSection = () => {
         {/* Action Buttons - Centered */}
         <div className="flex flex-col sm:flex-row justify-center gap-4 mt-6 animate-fadeInUp" style={{animationDelay: '2.1s'}}>
           <Button 
-            onClick={scrollToContact}
+            onClick={openGoogleForm}
             className="bg-gradient-red hover:scale-105 transform transition-all duration-300 text-white px-8 py-6 text-lg font-japanese font-medium shadow-lg hover:shadow-xl border-2 border-karate-red hover:border-karate-gold animate-glow"
           >
             Join Our Dojo
