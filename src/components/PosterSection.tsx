@@ -50,7 +50,7 @@ const PosterSection = () => {
                 <div className="md:w-3/4">
                   <p className="font-bold">Sensei Rizwan Shaikh</p>
                   <p className="text-karate-dark">Nidan (2nd Degree Black Belt)</p>
-                  <p className="text-karate-red">20+ years of experience</p>
+                  <p className="text-karate-red">12+ years of experience</p>
                 </div>
               </div>
               
