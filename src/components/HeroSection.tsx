@@ -77,14 +77,8 @@ const HeroSection = () => {
           We don't fight to hurt — we train to grow stronger, sharper, and more confident.
         </p>
 
-        {/* Schedule Section - Centered */}
-        <div className="bg-gradient-gold text-karate-black font-bold p-6 rounded-lg shadow-xl mb-8 max-w-xl mx-auto border-2 border-karate-gold animate-fadeInUp" style={{animationDelay: '1.5s'}}>
-          <h3 className="text-xl mb-2 font-japanese text-center">Schedule</h3>
-          <p className="text-lg font-japanese text-center">Monday, Wednesday, Friday — 7:00 PM to 8:00 PM</p>
-        </div>
-
         {/* Gichin Funakoshi Quote Section - Centered */}
-        <div className="bg-gradient-to-r from-karate-red to-karate-darkgold text-white p-8 rounded-lg shadow-2xl mb-8 max-w-4xl mx-auto border-4 border-karate-gold animate-fadeInUp transform hover:scale-105 transition-all duration-300" style={{animationDelay: '1.8s'}}>
+        <div className="bg-gradient-to-r from-karate-red to-karate-darkgold text-white p-8 rounded-lg shadow-2xl mb-8 max-w-4xl mx-auto border-4 border-karate-gold animate-fadeInUp transform hover:scale-105 transition-all duration-300" style={{animationDelay: '1.5s'}}>
           <div className="text-center">
             <div className="text-6xl mb-4 opacity-20 font-japanese">❝</div>
             <blockquote className="text-xl md:text-2xl font-japanese font-medium mb-4 leading-relaxed">
@@ -102,7 +96,7 @@ const HeroSection = () => {
         </div>
 
         {/* Action Buttons - Centered */}
-        <div className="flex flex-col sm:flex-row justify-center gap-4 mt-6 animate-fadeInUp" style={{animationDelay: '2.1s'}}>
+        <div className="flex flex-col sm:flex-row justify-center gap-4 mt-6 animate-fadeInUp" style={{animationDelay: '1.8s'}}>
           <Button 
             onClick={openGoogleForm}
             className="bg-gradient-red hover:scale-105 transform transition-all duration-300 text-white px-8 py-6 text-lg font-japanese font-medium shadow-lg hover:shadow-xl border-2 border-karate-red hover:border-karate-gold animate-glow"
@@ -119,7 +113,7 @@ const HeroSection = () => {
         </div>
 
         {/* Contact Information - Centered */}
-        <div className="mt-12 text-center animate-fadeInUp" style={{animationDelay: '2.4s'}}>
+        <div className="mt-12 text-center animate-fadeInUp" style={{animationDelay: '2.1s'}}>
           <p className="text-karate-black font-semibold font-japanese bg-white/80 backdrop-blur-sm px-6 py-3 rounded-full inline-block shadow-lg border border-karate-gold">
             Contact: +91 7620238222 / 9226711681
           </p>
