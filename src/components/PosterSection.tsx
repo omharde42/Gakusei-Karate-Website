@@ -20,16 +20,6 @@ const PosterSection = () => {
             <div className="space-y-6">
               <div className="flex flex-col md:flex-row md:items-center gap-4 bg-white p-4 rounded-lg">
                 <div className="md:w-1/4 text-center md:text-left">
-                  <h4 className="font-bold text-karate-red text-xl">Classes</h4>
-                </div>
-                <div className="md:w-3/4">
-                  <p className="font-bold">Monday, Wednesday, Friday</p>
-                  <p className="text-karate-dark">7:00 PM to 8:00 PM</p>
-                </div>
-              </div>
-              
-              <div className="flex flex-col md:flex-row md:items-center gap-4 bg-white p-4 rounded-lg">
-                <div className="md:w-1/4 text-center md:text-left">
                   <h4 className="font-bold text-karate-red text-xl">Benefits</h4>
                 </div>
                 <div className="md:w-3/4">
