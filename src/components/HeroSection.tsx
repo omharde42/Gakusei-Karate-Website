@@ -115,7 +115,7 @@ const HeroSection = () => {
         {/* Contact Information - Centered */}
         <div className="mt-12 text-center animate-fadeInUp" style={{animationDelay: '2.1s'}}>
           <p className="text-karate-black font-semibold font-japanese bg-white/80 backdrop-blur-sm px-6 py-3 rounded-full inline-block shadow-lg border border-karate-gold">
-            Contact: +91 7620238222 / 9226711681
+            Contact: +91 7620238222
           </p>
         </div>
       </div>

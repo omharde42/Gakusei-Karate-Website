@@ -49,7 +49,7 @@ const PosterSection = () => {
                   <h4 className="font-bold text-karate-red text-xl">Contact</h4>
                 </div>
                 <div className="md:w-3/4">
-                  <p>Phone: +91 7620238222 / 9226711681</p>
+                  <p>Phone: +91 7620238222</p>
                   <p className="text-sm italic mt-1">Call or WhatsApp to enroll</p>
                 </div>
               </div>

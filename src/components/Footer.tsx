@@ -14,7 +14,6 @@ const Footer = () => {
           <div className="mb-6 md:mb-0 text-center md:text-left">
             <h4 className="text-lg font-semibold mb-2">Contact</h4>
             <p>Sensei Rizwan Shaikh: +91 7620238222</p>
-            <p>Alternative: +91 9226711681</p>
           </div>
           
           <div className="text-center md:text-right">
