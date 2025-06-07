@@ -1,6 +1,7 @@
 
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
+import IntroSection from "@/components/IntroSection";
 import AboutSection from "@/components/AboutSection";
 import ScheduleSection from "@/components/ScheduleSection";
 import GallerySection from "@/components/GallerySection";
@@ -13,6 +14,7 @@ const Index = () => {
     <div className="bg-gradient-karate min-h-screen">
       <Navbar />
       <HeroSection />
+      <IntroSection />
       <AboutSection />
       <ScheduleSection />
       <GallerySection />

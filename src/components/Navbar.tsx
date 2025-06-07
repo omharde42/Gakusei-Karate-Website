@@ -1,8 +1,10 @@
+
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 
 const navItems = [
   { id: "home", label: "Home" },
+  { id: "intro", label: "Intro" },
   { id: "about", label: "About" },
   { id: "schedule", label: "Schedule" },
   { id: "gallery", label: "Gallery" },
