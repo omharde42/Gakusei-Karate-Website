@@ -40,9 +40,9 @@ const IntroSection = () => {
               {/* Sensei Photo */}
               <div className="mb-6">
                 <img 
-                  src="/lovable-uploads/7e9df7a2-52e3-4f22-95a5-30948147d95a.png" 
+                  src="/lovable-uploads/71e8d1e5-4625-4731-957d-51a23555d7c3.png" 
                   alt="Sensei Rizwan Shaikh" 
-                  className="w-48 h-48 mx-auto rounded-full object-cover border-4 border-karate-gold shadow-lg"
+                  className="w-48 h-60 mx-auto rounded-xl object-cover object-top border-4 border-karate-gold shadow-lg"
                 />
               </div>
               
