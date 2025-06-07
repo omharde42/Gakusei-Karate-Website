@@ -116,7 +116,6 @@ const ScheduleSection = () => {
                   <div className="text-3xl mb-3">📞</div>
                   <h5 className="font-bold text-karate-black mb-2 text-lg">Contact Information</h5>
                   <p className="text-karate-dark font-semibold">+91 7620238222</p>
-                  <p className="text-karate-dark font-semibold">+91 9226711681</p>
                   <p className="text-sm text-karate-dark mt-2">Call for Registration & Queries</p>
                 </div>
               </div>
