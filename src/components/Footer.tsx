@@ -1,4 +1,6 @@
 
+import { Instagram } from "lucide-react";
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   
@@ -17,6 +19,16 @@ const Footer = () => {
           </div>
           
           <div className="text-center md:text-right">
+            <h4 className="text-lg font-semibold mb-3">Follow Us</h4>
+            <div className="flex justify-center md:justify-end mb-4">
+              <a 
+                href="#" 
+                className="text-white hover:text-karate-gold transition-colors duration-300 p-2"
+                aria-label="Follow us on Instagram"
+              >
+                <Instagram size={24} />
+              </a>
+            </div>
             <p className="text-sm text-gray-400">
               &copy; {currentYear} The Karate Gakusei Dojo<br />
               Designed with spirit and discipline<br />
