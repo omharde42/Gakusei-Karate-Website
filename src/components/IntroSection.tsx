@@ -1,4 +1,5 @@
 
+
 const IntroSection = () => {
   return (
     <section id="intro" className="py-20 px-6 bg-white">
@@ -40,7 +41,7 @@ const IntroSection = () => {
               {/* Sensei Photo */}
               <div className="mb-6">
                 <img 
-                  src="/lovable-uploads/beb7d7ee-90aa-4fe2-ae1f-47ceb7bf7cf8.png" 
+                  src="/lovable-uploads/a71ca07b-9bf3-4933-8907-8688fb9cfe42.png" 
                   alt="Sensei Rizwan Shaikh" 
                   className="w-48 h-60 mx-auto rounded-xl object-cover object-top border-4 border-karate-gold shadow-lg"
                 />
@@ -69,3 +70,4 @@ const IntroSection = () => {
 };
 
 export default IntroSection;
+
