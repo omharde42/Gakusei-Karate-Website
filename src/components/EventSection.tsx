@@ -1,5 +1,4 @@
-
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { 
   Dialog,
   DialogContent,
@@ -10,6 +9,32 @@ import { Calendar, Clock, MapPin, Image } from "lucide-react";
 
 const EventSection = () => {
   const [showPoster, setShowPoster] = useState(false);
+  const [isEventActive, setIsEventActive] = useState(true);
+
+  useEffect(() => {
+    const checkEventStatus = () => {
+      const now = new Date();
+      // Event removal time: June 15, 2025 at 7:00 PM
+      const eventRemovalTime = new Date('2025-06-15T19:00:00');
+      
+      if (now >= eventRemovalTime) {
+        setIsEventActive(false);
+      }
+    };
+
+    // Check immediately
+    checkEventStatus();
+
+    // Check every minute
+    const interval = setInterval(checkEventStatus, 60000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  // Don't render the section if the event is no longer active
+  if (!isEventActive) {
+    return null;
+  }
 
   return (
     <section id="events" className="py-16 bg-gradient-to-br from-karate-lightgold/30 to-white">
