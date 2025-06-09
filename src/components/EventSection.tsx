@@ -6,19 +6,10 @@ import {
   DialogClose,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { Calendar, Clock, MapPin, Download, Image } from "lucide-react";
+import { Calendar, Clock, MapPin, Image } from "lucide-react";
 
 const EventSection = () => {
   const [showPoster, setShowPoster] = useState(false);
-
-  const handleDownloadPDF = () => {
-    // This would typically link to an actual PDF file
-    // For now, we'll create a downloadable link
-    const link = document.createElement('a');
-    link.href = '/lovable-uploads/93fc3e57-302f-41db-a898-02b1faf7f3d2.png';
-    link.download = 'Karate-Rank-Evaluation-Event.pdf';
-    link.click();
-  };
 
   return (
     <section id="events" className="py-16 bg-gradient-to-br from-karate-lightgold/30 to-white">
@@ -62,7 +53,7 @@ const EventSection = () => {
                   <Calendar className="text-karate-red h-6 w-6" />
                   <div>
                     <p className="font-semibold text-karate-dark">Event Date</p>
-                    <p className="text-lg text-karate-navy font-bold">June 19, 2025</p>
+                    <p className="text-lg text-karate-navy font-bold">June 15, 2025</p>
                   </div>
                 </div>
 
@@ -132,20 +123,10 @@ const EventSection = () => {
                   <p className="text-sm text-karate-dark mt-2">Click to view full poster</p>
                 </div>
 
-                <div className="space-y-4">
-                  <Button 
-                    onClick={handleDownloadPDF}
-                    className="w-full bg-karate-red hover:bg-red-700 text-white flex items-center justify-center space-x-2"
-                  >
-                    <Download className="h-5 w-5" />
-                    <span>Download Event Details (PDF)</span>
-                  </Button>
-
-                  <div className="bg-karate-navy text-white p-4 rounded-lg text-center">
-                    <p className="font-semibold mb-2">Registration Required</p>
-                    <p className="text-sm">Contact Sensei Rizwan Shaikh for participation details</p>
-                    <p className="text-karate-gold font-bold">+91 76202 38222</p>
-                  </div>
+                <div className="bg-karate-navy text-white p-4 rounded-lg text-center">
+                  <p className="font-semibold mb-2">Registration Required</p>
+                  <p className="text-sm">Contact Sensei Rizwan Shaikh for participation details</p>
+                  <p className="text-karate-gold font-bold">+91 76202 38222</p>
                 </div>
               </div>
             </div>
@@ -186,7 +167,7 @@ const EventSection = () => {
               />
               <div className="mt-4 bg-gradient-to-r from-karate-gold/20 to-karate-red/10 p-4 rounded-lg">
                 <p className="text-lg font-medium font-japanese text-karate-black text-center">
-                  Karate Rank Evaluation - June 19, 2025 at Cobra Thai, Kharadi
+                  Karate Rank Evaluation - June 15, 2025 at Cobra Thai, Kharadi
                 </p>
               </div>
               <DialogClose asChild>
