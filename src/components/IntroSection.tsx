@@ -2,8 +2,9 @@
 
 const IntroSection = () => {
   return (
-    <section id="intro" className="py-20 px-6 bg-white">
-      <div className="container mx-auto max-w-6xl">
+    <section id="intro" className="py-20 px-6 bg-white transform-3d perspective-2000 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-karate-gold/5 via-transparent to-karate-red/5 parallax-layer-1"></div>
+      <div className="container mx-auto max-w-6xl relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-12">
           {/* Left side - Introduction content */}
           <div className="flex-1 lg:pr-8">
@@ -37,13 +38,14 @@ const IntroSection = () => {
           
           {/* Right side - Sensei information with photo */}
           <div className="flex-1 lg:pl-8">
-            <div className="bg-gradient-to-br from-karate-gold/10 to-karate-red/10 rounded-2xl p-8 text-center shadow-lg">
+            <div className="bg-gradient-to-br from-karate-gold/10 to-karate-red/10 rounded-2xl p-8 text-center shadow-3d card-3d glass-strong">
               {/* Sensei Photo */}
               <div className="mb-6">
                 <img 
                   src="/lovable-uploads/a71ca07b-9bf3-4933-8907-8688fb9cfe42.png" 
                   alt="Sensei Rizwan Shaikh" 
-                  className="w-48 h-60 mx-auto rounded-xl object-cover object-top border-4 border-karate-gold shadow-lg"
+                  className="w-48 h-60 mx-auto rounded-xl object-cover object-top border-4 border-karate-gold shadow-3d-hover float-3d transition-transform duration-500 hover:scale-105"
+                  style={{ transform: 'translateZ(30px)' }}
                 />
               </div>
               

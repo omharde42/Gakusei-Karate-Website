@@ -37,8 +37,9 @@ const EventSection = () => {
   }
 
   return (
-    <section id="events" className="py-16 bg-gradient-to-br from-karate-lightgold/30 to-white">
-      <div className="container mx-auto px-4">
+    <section id="events" className="py-16 bg-gradient-to-br from-karate-lightgold/30 to-white transform-3d perspective-2000 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-tl from-transparent via-karate-red/10 to-transparent parallax-layer-1"></div>
+      <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col md:flex-row justify-between items-center mb-10">
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-karate-red text-center md:text-left mb-6 font-japanese">
@@ -48,17 +49,18 @@ const EventSection = () => {
               Stay updated with our latest karate events and rank evaluations.
             </p>
           </div>
-          <div className="w-32 h-32 animate-float">
+          <div className="w-32 h-32 float-3d">
             <img 
               src="/lovable-uploads/98bc18da-a8e3-4271-9086-87fef0798538.png" 
               alt="The Karate Gakusei Dojo Logo" 
-              className="w-full h-full object-contain hover:scale-110 transition-transform duration-300"
+              className="w-full h-full object-contain hover:scale-125 transition-transform duration-500 shadow-3d-hover"
+              style={{ transform: 'translateZ(40px)' }}
             />
           </div>
         </div>
 
         {/* Featured Event Card */}
-        <div className="max-w-6xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-karate-gold">
+        <div className="max-w-6xl mx-auto bg-white rounded-2xl shadow-3d-hover overflow-hidden border-2 border-karate-gold card-3d glass-strong">
           <div className="bg-gradient-to-r from-karate-red to-karate-navy text-white p-6">
             <div className="flex items-center justify-between">
               <h3 className="text-2xl md:text-3xl font-bold font-japanese">
@@ -139,7 +141,8 @@ const EventSection = () => {
                     <img 
                       src="/lovable-uploads/93fc3e57-302f-41db-a898-02b1faf7f3d2.png"
                       alt="Karate Rank Evaluation Event Poster"
-                      className="w-full max-w-md mx-auto rounded-lg shadow-lg border-2 border-karate-gold hover:scale-105 transition-transform duration-300"
+                      className="w-full max-w-md mx-auto rounded-lg shadow-3d-hover border-2 border-karate-gold hover:scale-110 transition-all duration-500 card-3d"
+                      style={{ transform: 'translateZ(20px)' }}
                     />
                     <div className="absolute inset-0 bg-karate-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
                       <Image className="text-white h-8 w-8" />

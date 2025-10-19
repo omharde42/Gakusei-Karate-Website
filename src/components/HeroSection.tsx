@@ -17,21 +17,22 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex flex-col justify-center items-center bg-gradient-karate pt-20 pb-16 px-4 relative overflow-hidden">
+    <section id="home" className="min-h-screen flex flex-col justify-center items-center bg-gradient-karate pt-20 pb-16 px-4 relative overflow-hidden transform-3d perspective-2000">
       {/* Decorative elements */}
-      <div className="absolute top-20 left-10 text-6xl opacity-10 animate-float">空手</div>
-      <div className="absolute bottom-20 right-10 text-6xl opacity-10 animate-float" style={{animationDelay: '1s'}}>道</div>
+      <div className="absolute top-20 left-10 text-6xl opacity-10 float-3d shadow-glow-gold">空手</div>
+      <div className="absolute bottom-20 right-10 text-6xl opacity-10 float-3d shadow-glow-red" style={{animationDelay: '1s'}}>道</div>
       
       <div className="container max-w-5xl mx-auto text-center relative z-10">
         {/* Logo Section with Hierarchy - Centered */}
         <div className="mb-8 flex flex-col items-center justify-center animate-fadeInUp">
           {/* Main ISKI Logo - Centered */}
           <div className="mb-4 relative animate-slideIn flex justify-center">
-            <div className="bg-white p-2 rounded-full shadow-xl border-4 border-karate-gold animate-glow w-32 h-32 flex items-center justify-center">
+            <div className="bg-white p-2 rounded-full shadow-3d-hover border-4 border-karate-gold shadow-glow-gold w-32 h-32 flex items-center justify-center card-3d float-3d"
+              style={{ transform: 'translateZ(50px)' }}>
               <img 
                 src="/lovable-uploads/596add0b-6e8d-49e8-b05d-d51904889b69.png" 
                 alt="ISKI India - International Shotokan Karate Institute" 
-                className="w-full h-full object-cover rounded-full hover:scale-110 transition-transform duration-300"
+                className="w-full h-full object-cover rounded-full hover:scale-125 transition-transform duration-500"
               />
             </div>
           </div>
@@ -54,11 +55,12 @@ const HeroSection = () => {
 
           {/* Karate Gakusei Dojo Logo - Centered */}
           <div className="relative animate-slideIn flex justify-center" style={{animationDelay: '0.6s'}}>
-            <div className="bg-white p-2 rounded-full shadow-lg border-2 border-karate-red animate-glow w-28 h-28 flex items-center justify-center">
+            <div className="bg-white p-2 rounded-full shadow-3d border-2 border-karate-red shadow-glow-red w-28 h-28 flex items-center justify-center card-3d float-3d"
+              style={{ transform: 'translateZ(40px)', animationDelay: '2s' }}>
               <img 
                 src="/lovable-uploads/837f88e6-2182-4535-b125-085a716b02f0.png" 
                 alt="The Karate Gakusei Dojo" 
-                className="w-full h-full object-cover rounded-full hover:scale-110 transition-transform duration-300"
+                className="w-full h-full object-cover rounded-full hover:scale-125 transition-transform duration-500"
               />
             </div>
           </div>
@@ -78,7 +80,8 @@ const HeroSection = () => {
         </p>
 
         {/* Gichin Funakoshi Quote Section - Centered */}
-        <div className="bg-gradient-to-r from-karate-red to-karate-darkgold text-white p-8 rounded-lg shadow-2xl mb-8 max-w-4xl mx-auto border-4 border-karate-gold animate-fadeInUp transform hover:scale-105 transition-all duration-300" style={{animationDelay: '1.5s'}}>
+        <div className="bg-gradient-to-r from-karate-red to-karate-darkgold text-white p-8 rounded-lg shadow-3d-hover mb-8 max-w-4xl mx-auto border-4 border-karate-gold animate-fadeInUp transform hover:scale-110 transition-all duration-500 card-3d glass-strong" 
+          style={{animationDelay: '1.5s', transform: 'translateZ(30px)'}}>
           <div className="text-center">
             <div className="text-6xl mb-4 opacity-20 font-japanese">❝</div>
             <blockquote className="text-xl md:text-2xl font-japanese font-medium mb-4 leading-relaxed">
@@ -99,14 +102,14 @@ const HeroSection = () => {
         <div className="flex flex-col sm:flex-row justify-center gap-4 mt-6 animate-fadeInUp" style={{animationDelay: '1.8s'}}>
           <Button 
             onClick={openGoogleForm}
-            className="bg-gradient-red hover:scale-105 transform transition-all duration-300 text-white px-8 py-6 text-lg font-japanese font-medium shadow-lg hover:shadow-xl border-2 border-karate-red hover:border-karate-gold animate-glow"
+            className="bg-gradient-red hover:scale-110 transform transition-all duration-500 text-white px-8 py-6 text-lg font-japanese font-medium shadow-3d-hover hover:shadow-glow-red border-2 border-karate-red hover:border-karate-gold btn-3d"
           >
             Join Our Dojo
           </Button>
           <Button 
             variant="outline" 
             onClick={() => document.getElementById("about")?.scrollIntoView({ behavior: "smooth" })}
-            className="border-2 border-karate-gold text-karate-black hover:bg-gradient-gold hover:text-white hover:scale-105 transform transition-all duration-300 px-8 py-6 text-lg font-japanese font-medium shadow-lg hover:shadow-xl"
+            className="border-2 border-karate-gold text-karate-black hover:bg-gradient-gold hover:text-white hover:scale-110 transform transition-all duration-500 px-8 py-6 text-lg font-japanese font-medium shadow-3d-hover btn-3d"
           >
             Learn More
           </Button>

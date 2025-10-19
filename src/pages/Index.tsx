@@ -9,10 +9,12 @@ import EventSection from "@/components/EventSection";
 import ContactSection from "@/components/ContactSection";
 import PosterSection from "@/components/PosterSection";
 import Footer from "@/components/Footer";
+import ThreeBackground from "@/components/ThreeBackground";
 
 const Index = () => {
   return (
-    <div className="bg-gradient-karate min-h-screen">
+    <div className="bg-gradient-karate min-h-screen perspective-1000 transform-3d relative overflow-hidden">
+      <ThreeBackground />
       <Navbar />
       <HeroSection />
       <IntroSection />

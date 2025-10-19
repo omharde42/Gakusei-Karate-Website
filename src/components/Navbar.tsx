@@ -57,12 +57,17 @@ const Navbar = () => {
   return (
     <nav 
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 px-6",
-        isScrolled ? "bg-white/95 backdrop-blur-md shadow-lg border-b-2 border-karate-gold py-2" : "bg-transparent"
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-500 py-4 px-6 transform-3d",
+        isScrolled 
+          ? "glass-strong shadow-3d-hover border-b-2 border-karate-gold py-2 translate-y-0" 
+          : "bg-transparent translate-y-0"
       )}
+      style={{
+        transform: isScrolled ? 'translateZ(50px)' : 'translateZ(0)',
+      }}
     >
       <div className="container mx-auto flex justify-between items-center">
-        <div className="text-karate-red font-bold text-xl md:text-2xl font-japanese hover:text-karate-gold transition-colors duration-300">
+        <div className="text-karate-red font-bold text-xl md:text-2xl font-japanese hover:text-karate-gold transition-all duration-300 float-3d shadow-glow-red hover:shadow-glow-gold">
           The Karate Gakusei Dojo
         </div>
         
@@ -89,9 +94,14 @@ const Navbar = () => {
               key={item.id}
               onClick={() => scrollToSection(item.id)}
               className={cn(
-                "font-medium text-base hover:text-karate-gold transition-all duration-300 font-japanese relative group",
-                activeSection === item.id ? "text-karate-red font-bold" : "text-karate-black"
+                "font-medium text-base hover:text-karate-gold transition-all duration-300 font-japanese relative group btn-3d px-4 py-2 rounded-lg",
+                activeSection === item.id 
+                  ? "text-karate-red font-bold shadow-glow-red" 
+                  : "text-karate-black hover:shadow-glow-gold"
               )}
+              style={{
+                transform: activeSection === item.id ? 'translateZ(10px)' : 'translateZ(0)',
+              }}
             >
               {item.label}
               <span className={cn(

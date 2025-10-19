@@ -5,8 +5,9 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   
   return (
-    <footer className="bg-karate-navy py-8 text-white">
-      <div className="container mx-auto px-4">
+    <footer className="bg-karate-navy py-8 text-white transform-3d perspective-1000 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-karate-gold/10 to-transparent parallax-layer-1"></div>
+      <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
             <h3 className="text-xl font-bold mb-2">The Karate Gakusei Dojo</h3>
@@ -23,8 +24,9 @@ const Footer = () => {
             <div className="flex justify-center md:justify-end mb-4">
               <a 
                 href="#" 
-                className="text-white hover:text-karate-gold transition-colors duration-300 p-2"
+                className="text-white hover:text-karate-gold transition-all duration-500 p-2 btn-3d shadow-glow-gold hover:scale-125"
                 aria-label="Follow us on Instagram"
+                style={{ transform: 'translateZ(20px)' }}
               >
                 <Instagram size={24} />
               </a>

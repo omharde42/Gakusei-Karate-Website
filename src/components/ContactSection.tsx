@@ -86,13 +86,14 @@ const ContactSection = () => {
   };
   
   return (
-    <section id="contact" className="py-16 bg-gradient-karate">
-      <div className="container mx-auto px-4">
+    <section id="contact" className="py-16 bg-gradient-karate transform-3d perspective-2000 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-karate-gold/10 to-transparent parallax-layer-1"></div>
+      <div className="container mx-auto px-4 relative z-10">
         <h2 className="text-3xl md:text-4xl font-bold text-karate-red text-center mb-8">
           Contact Us
         </h2>
         
-        <div className="max-w-md mx-auto bg-white rounded-lg shadow-xl overflow-hidden">
+        <div className="max-w-md mx-auto bg-white rounded-lg shadow-3d-hover overflow-hidden card-3d glass-strong border-2 border-karate-gold">
           <div className="p-6 md:p-8">
             <p className="text-karate-dark mb-6">
               Fill out the form below to inquire about classes. You will be redirected to WhatsApp to complete your registration:
@@ -154,7 +155,7 @@ const ContactSection = () => {
                 {errors.age && <p className="text-red-500 text-sm">{errors.age}</p>}
               </div>
               
-              <Button type="submit" className="w-full bg-karate-red hover:bg-red-700 text-white">
+              <Button type="submit" className="w-full bg-karate-red hover:bg-red-700 text-white btn-3d shadow-glow-red hover:shadow-glow-gold">
                 Submit via WhatsApp
               </Button>
             </form>

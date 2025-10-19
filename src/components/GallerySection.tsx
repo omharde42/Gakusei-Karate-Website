@@ -86,8 +86,9 @@ const GallerySection = () => {
   const [selectedImage, setSelectedImage] = useState<typeof galleryImages[0] | null>(null);
 
   return (
-    <section id="gallery" className="py-16 bg-gradient-to-br from-gray-50 to-karate-lightgold/20">
-      <div className="container mx-auto px-4">
+    <section id="gallery" className="py-16 bg-gradient-to-br from-gray-50 to-karate-lightgold/20 transform-3d perspective-2000 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-tl from-karate-red/5 via-transparent to-karate-gold/5 parallax-layer-1"></div>
+      <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col md:flex-row justify-between items-center mb-10">
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-karate-red text-center md:text-left mb-6 font-japanese">
@@ -97,11 +98,12 @@ const GallerySection = () => {
               Explore moments from training, tournaments, and our karate community.
             </p>
           </div>
-          <div className="w-40 h-40 animate-float">
+          <div className="w-40 h-40 float-3d">
             <img 
               src="/lovable-uploads/98bc18da-a8e3-4271-9086-87fef0798538.png" 
               alt="The Karate Gakusei Dojo Logo" 
-              className="w-full h-full object-contain hover:scale-110 transition-transform duration-300"
+              className="w-full h-full object-contain hover:scale-125 transition-transform duration-500 shadow-3d-hover"
+              style={{ transform: 'translateZ(40px)' }}
             />
           </div>
         </div>
@@ -117,8 +119,11 @@ const GallerySection = () => {
           {galleryImages.map((image, index) => (
             <div 
               key={image.id}
-              className="relative overflow-hidden rounded-lg shadow-lg cursor-pointer transform transition-all duration-500 hover:scale-105 hover:shadow-2xl group animate-fadeInUp border-2 border-transparent hover:border-karate-gold"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className="relative overflow-hidden rounded-lg shadow-3d cursor-pointer transform transition-all duration-500 hover:scale-110 shadow-3d-hover group animate-fadeInUp border-2 border-transparent hover:border-karate-gold card-3d"
+              style={{ 
+                animationDelay: `${index * 0.1}s`,
+                transform: 'translateZ(0)',
+              }}
               onClick={() => setSelectedImage(image)}
             >
               <div className="aspect-w-4 aspect-h-3">

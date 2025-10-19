@@ -1,15 +1,16 @@
 
 const ScheduleSection = () => {
   return (
-    <section id="schedule" className="py-16 bg-gradient-to-br from-karate-lightgold to-white">
-      <div className="container mx-auto px-4">
+    <section id="schedule" className="py-16 bg-gradient-to-br from-karate-lightgold to-white transform-3d perspective-2000 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-bl from-transparent via-karate-gold/10 to-transparent parallax-layer-1"></div>
+      <div className="container mx-auto px-4 relative z-10">
         <h2 className="text-3xl md:text-4xl font-bold text-karate-red text-center mb-8 font-japanese">
           Training Schedule
         </h2>
         
         <div className="max-w-6xl mx-auto">
           {/* Main Schedule Card */}
-          <div className="bg-white rounded-lg shadow-xl border-2 border-karate-gold overflow-hidden mb-8">
+          <div className="bg-white rounded-lg shadow-3d-hover border-2 border-karate-gold overflow-hidden mb-8 card-3d glass-strong">
             <div className="bg-gradient-red text-white p-6 text-center">
               <h3 className="text-2xl font-bold font-japanese mb-2">Weekly Training Sessions</h3>
               <p className="text-karate-gold font-semibold">All Ages & Experience Levels Welcome</p>

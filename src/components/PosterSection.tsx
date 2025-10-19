@@ -1,13 +1,14 @@
 
 const PosterSection = () => {
   return (
-    <section id="poster" className="py-16 bg-white">
-      <div className="container mx-auto px-4">
+    <section id="poster" className="py-16 bg-white transform-3d perspective-2000 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-karate-gold/5 via-transparent to-karate-red/5 parallax-layer-1"></div>
+      <div className="container mx-auto px-4 relative z-10">
         <h2 className="text-3xl md:text-4xl font-bold text-karate-red text-center mb-8">
           Dojo Poster
         </h2>
         
-        <div className="max-w-3xl mx-auto bg-gradient-to-br from-red-50 to-red-100 rounded-lg shadow-lg overflow-hidden">
+        <div className="max-w-3xl mx-auto bg-gradient-to-br from-red-50 to-red-100 rounded-lg shadow-3d-hover overflow-hidden card-3d glass-strong border-2 border-karate-gold">
           <div className="p-6 md:p-10">
             {/* Poster Header */}
             <div className="text-center border-b-4 border-karate-red pb-6 mb-6">

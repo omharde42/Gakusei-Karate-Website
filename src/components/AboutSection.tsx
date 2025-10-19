@@ -1,8 +1,9 @@
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-16 bg-white">
-      <div className="container mx-auto px-4 max-w-4xl">
+    <section id="about" className="py-16 bg-white transform-3d perspective-2000 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-tr from-karate-red/5 via-transparent to-karate-gold/5 parallax-layer-1"></div>
+      <div className="container mx-auto px-4 max-w-4xl relative z-10">
         <h2 className="text-3xl md:text-4xl font-bold text-karate-red text-center mb-10 font-japanese">
           About Us
         </h2>
@@ -10,13 +11,14 @@ const AboutSection = () => {
         <div className="space-y-6 text-karate-dark">
           <div className="flex flex-col md:flex-row gap-8 items-center mb-8">
             <div className="md:w-1/3 flex justify-center">
-              <div className="relative h-64 w-64 group">
-                <div className="absolute inset-0 bg-gradient-gold rounded-full opacity-30 animate-glow"></div>
-                <div className="absolute inset-2 bg-white rounded-full flex items-center justify-center shadow-xl border-2 border-karate-gold group-hover:scale-105 transition-transform duration-300">
+              <div className="relative h-64 w-64 group float-3d">
+                <div className="absolute inset-0 bg-gradient-gold rounded-full opacity-30 shadow-glow-gold"></div>
+                <div className="absolute inset-2 bg-white rounded-full flex items-center justify-center shadow-3d-hover border-2 border-karate-gold group-hover:scale-110 transition-all duration-500 card-3d"
+                  style={{ transform: 'translateZ(40px)' }}>
                   <img 
                     src="/lovable-uploads/04d9278d-ac8f-4e64-9cb2-f4c1f731f7dd.png" 
                     alt="The Karate Gakusei Dojo Logo" 
-                    className="h-32 w-32 object-contain animate-float"
+                    className="h-32 w-32 object-contain"
                   />
                 </div>
               </div>
@@ -30,7 +32,7 @@ const AboutSection = () => {
             </div>
           </div>
           
-          <div className="bg-gradient-to-r from-karate-lightgold to-white p-6 rounded-lg shadow-lg border-l-4 border-karate-gold hover:shadow-xl transition-shadow duration-300">
+          <div className="bg-gradient-to-r from-karate-lightgold to-white p-6 rounded-lg shadow-3d border-l-4 border-karate-gold shadow-3d-hover transition-all duration-500 card-3d glass">
             <p className="text-lg leading-relaxed font-japanese font-light">
               Our dojo is more than just a place to learn how to punch and kick—it's a sanctuary for mental clarity, 
               spiritual growth, and physical strength. We follow the traditional values of Shotokan Karate, 
@@ -50,8 +52,9 @@ const AboutSection = () => {
               </p>
             </div>
             <div className="md:w-1/3 flex justify-center order-1 md:order-2">
-              <div className="h-48 w-48 bg-gradient-red rounded-lg shadow-lg flex items-center justify-center hover:scale-105 transition-transform duration-300 border-2 border-karate-gold">
-                <div className="text-6xl text-karate-gold font-bold font-japanese animate-glow">空手</div>
+              <div className="h-48 w-48 bg-gradient-red rounded-lg shadow-3d-hover flex items-center justify-center hover:scale-110 transition-all duration-500 border-2 border-karate-gold card-3d float-3d"
+                style={{ transform: 'translateZ(30px)' }}>
+                <div className="text-6xl text-karate-gold font-bold font-japanese shadow-glow-gold">空手</div>
               </div>
             </div>
           </div>
