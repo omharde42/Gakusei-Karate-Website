@@ -88,26 +88,25 @@ const Navbar = () => {
         </button>
         
         {/* Desktop navigation */}
-        <div className="hidden md:flex space-x-8">
+        <div className="hidden md:flex space-x-3">
           {navItems.map(item => (
             <button
               key={item.id}
               onClick={() => scrollToSection(item.id)}
               className={cn(
-                "font-medium text-base hover:text-karate-gold transition-all duration-300 font-japanese relative group btn-3d px-4 py-2 rounded-lg",
+                "font-medium text-sm hover:scale-105 transition-all duration-300 font-japanese relative group px-4 py-2.5 rounded-lg border-2 transform-3d",
                 activeSection === item.id 
-                  ? "text-karate-red font-bold shadow-glow-red" 
-                  : "text-karate-black hover:shadow-glow-gold"
+                  ? "bg-gradient-red text-white border-karate-red shadow-glow-red font-bold" 
+                  : "bg-gradient-to-br from-karate-lightgold to-white text-karate-black border-karate-gold hover:from-karate-gold hover:to-karate-darkgold hover:text-white hover:shadow-glow-gold"
               )}
               style={{
-                transform: activeSection === item.id ? 'translateZ(10px)' : 'translateZ(0)',
+                transform: activeSection === item.id ? 'translateZ(15px) translateY(-3px)' : 'translateZ(5px)',
+                boxShadow: activeSection === item.id 
+                  ? '0 8px 20px rgba(220, 38, 38, 0.4), 0 4px 10px rgba(220, 38, 38, 0.3), inset 0 -2px 4px rgba(0,0,0,0.2)' 
+                  : '0 4px 12px rgba(251, 191, 36, 0.3), 0 2px 6px rgba(0,0,0,0.15), inset 0 -2px 4px rgba(0,0,0,0.1)',
               }}
             >
               {item.label}
-              <span className={cn(
-                "absolute bottom-0 left-0 w-0 h-0.5 bg-karate-gold transition-all duration-300 group-hover:w-full",
-                activeSection === item.id ? "w-full" : ""
-              )}></span>
             </button>
           ))}
         </div>
@@ -115,15 +114,22 @@ const Navbar = () => {
       
       {/* Mobile menu dropdown */}
       {mobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-md shadow-lg py-4 px-6 flex flex-col space-y-4 border-b-2 border-karate-gold">
+        <div className="md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-md shadow-lg py-4 px-6 flex flex-col space-y-3 border-b-2 border-karate-gold">
           {navItems.map(item => (
             <button
               key={item.id}
               onClick={() => scrollToSection(item.id)}
               className={cn(
-                "font-medium text-base hover:text-karate-gold transition-colors text-left font-japanese",
-                activeSection === item.id ? "text-karate-red font-bold" : "text-karate-black"
+                "font-medium text-base transition-all text-left font-japanese px-4 py-2.5 rounded-lg border-2",
+                activeSection === item.id 
+                  ? "bg-gradient-red text-white border-karate-red font-bold shadow-lg" 
+                  : "bg-gradient-to-br from-karate-lightgold to-white text-karate-black border-karate-gold hover:from-karate-gold hover:to-karate-darkgold hover:text-white"
               )}
+              style={{
+                boxShadow: activeSection === item.id 
+                  ? '0 4px 12px rgba(220, 38, 38, 0.4), inset 0 -2px 4px rgba(0,0,0,0.2)' 
+                  : '0 2px 8px rgba(251, 191, 36, 0.3), inset 0 -2px 4px rgba(0,0,0,0.1)',
+              }}
             >
               {item.label}
             </button>

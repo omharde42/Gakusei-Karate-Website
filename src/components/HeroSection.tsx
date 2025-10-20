@@ -17,7 +17,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex flex-col justify-center items-center bg-gradient-karate pt-20 pb-16 px-4 relative overflow-hidden transform-3d perspective-2000">
+    <section id="home" className="min-h-screen flex flex-col justify-center items-center bg-gradient-karate pt-32 pb-16 px-4 relative overflow-hidden transform-3d perspective-2000">
       {/* Decorative elements */}
       <div className="absolute top-20 left-10 text-6xl opacity-10 float-3d shadow-glow-gold">空手</div>
       <div className="absolute bottom-20 right-10 text-6xl opacity-10 float-3d shadow-glow-red" style={{animationDelay: '1s'}}>道</div>
