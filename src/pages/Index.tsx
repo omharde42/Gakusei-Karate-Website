@@ -10,6 +10,7 @@ import ContactSection from "@/components/ContactSection";
 import PosterSection from "@/components/PosterSection";
 import Footer from "@/components/Footer";
 import ThreeBackground from "@/components/ThreeBackground";
+import TrainingSlideshow from "@/components/TrainingSlideshow";
 
 const Index = () => {
   return (
@@ -20,6 +21,7 @@ const Index = () => {
       <IntroSection />
       <AboutSection />
       <ScheduleSection />
+      <TrainingSlideshow />
       <GallerySection />
       <EventSection />
       <ContactSection />
