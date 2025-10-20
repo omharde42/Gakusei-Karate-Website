@@ -67,7 +67,7 @@ const Navbar = () => {
       }}
     >
       <div className="container mx-auto flex justify-between items-center">
-        <div className="text-karate-red font-bold text-xl md:text-2xl font-japanese hover:text-karate-gold transition-all duration-300 float-3d shadow-glow-red hover:shadow-glow-gold">
+        <div className="text-karate-red font-bold text-xl md:text-2xl font-japanese hover:text-karate-gold transition-all duration-300">
           The Karate Gakusei Dojo
         </div>
         

@@ -79,22 +79,62 @@ const HeroSection = () => {
           We don't fight to hurt — we train to grow stronger, sharper, and more confident.
         </p>
 
-        {/* Gichin Funakoshi Quote Section - Centered */}
-        <div className="bg-gradient-to-r from-karate-red to-karate-darkgold text-white p-8 rounded-lg shadow-3d-hover mb-8 max-w-4xl mx-auto border-4 border-karate-gold animate-fadeInUp transform hover:scale-110 transition-all duration-500 card-3d glass-strong" 
-          style={{animationDelay: '1.5s', transform: 'translateZ(30px)'}}>
-          <div className="text-center">
-            <div className="text-6xl mb-4 opacity-20 font-japanese">❝</div>
-            <blockquote className="text-xl md:text-2xl font-japanese font-medium mb-4 leading-relaxed">
-              "The ultimate aim of karate lies not in victory nor defeat, but in the perfection of character of its participants."
-            </blockquote>
-            <div className="flex items-center justify-center gap-2">
-              <div className="h-0.5 w-16 bg-karate-gold"></div>
-              <cite className="text-lg font-japanese font-bold text-karate-gold not-italic">
-                Master Gichin Funakoshi
-              </cite>
-              <div className="h-0.5 w-16 bg-karate-gold"></div>
+        {/* Gichin Funakoshi Quote Section - Enhanced 3D */}
+        <div className="relative mb-8 max-w-4xl mx-auto animate-fadeInUp perspective-2000" 
+          style={{animationDelay: '1.5s'}}>
+          {/* 3D Shadow layers for depth */}
+          <div className="absolute inset-0 bg-gradient-to-r from-karate-red/40 to-karate-darkgold/40 rounded-xl blur-2xl transform translate-y-8 translate-x-4" 
+            style={{transform: 'translateZ(-40px) translateY(12px) translateX(6px)'}}></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-karate-red/30 to-karate-darkgold/30 rounded-xl blur-xl transform translate-y-6 translate-x-3" 
+            style={{transform: 'translateZ(-30px) translateY(10px) translateX(5px)'}}></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-karate-red/20 to-karate-darkgold/20 rounded-xl blur-lg transform translate-y-4 translate-x-2" 
+            style={{transform: 'translateZ(-20px) translateY(8px) translateX(4px)'}}></div>
+          
+          {/* Main quote card with enhanced 3D effect */}
+          <div className="relative bg-gradient-to-br from-karate-red via-red-700 to-karate-darkgold text-white p-10 md:p-12 rounded-xl border-4 border-karate-gold transform hover:scale-105 transition-all duration-500 card-3d" 
+            style={{
+              transform: 'translateZ(50px) rotateX(2deg)',
+              boxShadow: `
+                0 25px 50px -12px rgba(220, 38, 38, 0.5),
+                0 15px 30px -15px rgba(251, 191, 36, 0.4),
+                inset 0 2px 4px rgba(255, 255, 255, 0.2),
+                inset 0 -4px 8px rgba(0, 0, 0, 0.3),
+                0 0 60px rgba(251, 191, 36, 0.3)
+              `
+            }}>
+            {/* Inner glow effect */}
+            <div className="absolute inset-0 bg-gradient-to-t from-transparent via-white/5 to-white/10 rounded-lg pointer-events-none"></div>
+            
+            <div className="text-center relative z-10">
+              <div className="text-7xl md:text-8xl mb-6 opacity-30 font-japanese text-karate-gold" 
+                style={{textShadow: '0 4px 8px rgba(0,0,0,0.3)'}}>❝</div>
+              <blockquote className="text-2xl md:text-3xl font-japanese font-bold mb-6 leading-relaxed text-white drop-shadow-lg"
+                style={{
+                  textShadow: '0 4px 12px rgba(0,0,0,0.5), 0 2px 4px rgba(0,0,0,0.3)',
+                  transform: 'translateZ(20px)'
+                }}>
+                "The ultimate aim of karate lies not in victory nor defeat, but in the perfection of character of its participants."
+              </blockquote>
+              <div className="flex items-center justify-center gap-3 mb-3">
+                <div className="h-1 w-20 bg-gradient-to-r from-transparent via-karate-gold to-transparent rounded-full" 
+                  style={{boxShadow: '0 0 10px rgba(251, 191, 36, 0.5)'}}></div>
+                <cite className="text-xl md:text-2xl font-japanese font-extrabold text-karate-gold not-italic px-4 py-2 bg-black/20 rounded-full border-2 border-karate-gold/50"
+                  style={{
+                    textShadow: '0 2px 8px rgba(0,0,0,0.5)',
+                    transform: 'translateZ(15px)',
+                    boxShadow: '0 4px 12px rgba(251, 191, 36, 0.3), inset 0 2px 4px rgba(255,255,255,0.1)'
+                  }}>
+                  Master Gichin Funakoshi
+                </cite>
+                <div className="h-1 w-20 bg-gradient-to-r from-transparent via-karate-gold to-transparent rounded-full"
+                  style={{boxShadow: '0 0 10px rgba(251, 191, 36, 0.5)'}}></div>
+              </div>
+              <p className="text-base md:text-lg mt-3 font-japanese text-karate-gold font-semibold"
+                style={{
+                  textShadow: '0 2px 6px rgba(0,0,0,0.4)',
+                  transform: 'translateZ(10px)'
+                }}>Founder of Shotokan Karate</p>
             </div>
-            <p className="text-sm mt-2 opacity-90 font-japanese">Founder of Shotokan Karate</p>
           </div>
         </div>
 
