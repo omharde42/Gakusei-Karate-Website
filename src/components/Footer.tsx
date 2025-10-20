@@ -23,7 +23,9 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-3">Follow Us</h4>
             <div className="flex justify-center md:justify-end mb-4">
               <a 
-                href="#" 
+                href="https://www.instagram.com/lonewarrior_rizwan?igsh=MWE2OTV4aGp6eXU1aA%3D%3D&utm_source=qr"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-white hover:text-karate-gold transition-all duration-500 p-2 btn-3d shadow-glow-gold hover:scale-125"
                 aria-label="Follow us on Instagram"
                 style={{ transform: 'translateZ(20px)' }}
