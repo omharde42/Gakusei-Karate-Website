@@ -1,7 +1,20 @@
-
 import { Button } from "@/components/ui/button";
+import { useState, useEffect } from "react";
+import trainingImage1 from "@/assets/karate-training-1.jpg";
+import trainingImage2 from "@/assets/karate-training-2.jpg";
+import trainingImage3 from "@/assets/karate-training-3.jpg";
 
 const HeroSection = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const images = [trainingImage1, trainingImage2, trainingImage3];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % images.length);
+    }, 30000); // Change every 30 seconds
+
+    return () => clearInterval(interval);
+  }, [images.length]);
   const scrollToContact = () => {
     const contactSection = document.getElementById("contact");
     if (contactSection) {
@@ -17,10 +30,32 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex flex-col justify-center items-center bg-gradient-karate pt-32 pb-16 px-4 relative overflow-hidden transform-3d perspective-2000">
+    <section id="home" className="min-h-screen flex flex-col justify-center items-center pt-32 pb-16 px-4 relative overflow-hidden transform-3d perspective-2000">
+      {/* Background Slideshow */}
+      <div className="absolute inset-0 z-0">
+        {images.map((image, index) => (
+          <div
+            key={index}
+            className={`absolute inset-0 transition-all duration-2000 ease-in-out ${
+              index === currentSlide 
+                ? 'opacity-100 scale-100' 
+                : 'opacity-0 scale-105'
+            }`}
+          >
+            <img
+              src={image}
+              alt={`Karate training background ${index + 1}`}
+              className="w-full h-full object-cover"
+            />
+          </div>
+        ))}
+        {/* Translucent overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-karate-black/70 via-karate-dark/80 to-karate-red/60 backdrop-blur-sm"></div>
+      </div>
+      
       {/* Decorative elements */}
-      <div className="absolute top-20 left-10 text-6xl opacity-10 float-3d shadow-glow-gold">空手</div>
-      <div className="absolute bottom-20 right-10 text-6xl opacity-10 float-3d shadow-glow-red" style={{animationDelay: '1s'}}>道</div>
+      <div className="absolute top-20 left-10 text-6xl opacity-10 float-3d shadow-glow-gold z-10">空手</div>
+      <div className="absolute bottom-20 right-10 text-6xl opacity-10 float-3d shadow-glow-red z-10" style={{animationDelay: '1s'}}>道</div>
       
       <div className="container max-w-5xl mx-auto text-center relative z-10">
         {/* Logo Section with Hierarchy - Centered */}
