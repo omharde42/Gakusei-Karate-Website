@@ -14,8 +14,8 @@ const EventSection = () => {
   useEffect(() => {
     const checkEventStatus = () => {
       const now = new Date();
-      // Event removal time: November 24, 2025 at 11:59 PM
-      const eventRemovalTime = new Date('2025-11-24T23:59:00');
+      // Event removal time: November 23, 2025 at 7:45 PM
+      const eventRemovalTime = new Date('2025-11-23T19:45:00');
       
       if (now >= eventRemovalTime) {
         setIsEventActive(false);
