@@ -5,7 +5,7 @@ import {
   DialogClose,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { Calendar, Clock, MapPin, Image } from "lucide-react";
+import { Calendar, Clock, MapPin, Image, Target, Users, Award, Sword } from "lucide-react";
 
 const EventSection = () => {
   const [showPoster, setShowPoster] = useState(false);
@@ -14,8 +14,8 @@ const EventSection = () => {
   useEffect(() => {
     const checkEventStatus = () => {
       const now = new Date();
-      // Event removal time: June 15, 2025 at 7:00 PM
-      const eventRemovalTime = new Date('2025-06-15T19:00:00');
+      // Event removal time: November 24, 2025 at 11:59 PM
+      const eventRemovalTime = new Date('2025-11-24T23:59:00');
       
       if (now >= eventRemovalTime) {
         setIsEventActive(false);
@@ -37,16 +37,23 @@ const EventSection = () => {
   }
 
   return (
-    <section id="events" className="py-16 bg-gradient-to-br from-karate-lightgold/30 to-white transform-3d perspective-2000 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-tl from-transparent via-karate-red/10 to-transparent parallax-layer-1"></div>
+    <section id="events" className="py-16 bg-gradient-to-br from-karate-red/20 via-karate-gold/30 to-white transform-3d perspective-2000 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-tl from-transparent via-karate-red/20 to-karate-gold/10 parallax-layer-1"></div>
+      <div className="absolute inset-0 animate-pulse opacity-20">
+        <div className="absolute top-10 left-10 w-32 h-32 bg-karate-gold rounded-full blur-3xl"></div>
+        <div className="absolute bottom-10 right-10 w-40 h-40 bg-karate-red rounded-full blur-3xl"></div>
+      </div>
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col md:flex-row justify-between items-center mb-10">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-karate-red text-center md:text-left mb-6 font-japanese">
-              イベント更新 - Event Updates
+            <h2 className="text-3xl md:text-5xl font-bold text-karate-red text-center md:text-left mb-6 font-japanese animate-fadeInUp"
+              style={{
+                textShadow: '0 4px 12px rgba(220, 38, 38, 0.4), 0 2px 6px rgba(0,0,0,0.3)'
+              }}>
+              🥋 イベント更新 - Event Updates
             </h2>
             <p className="text-center md:text-left text-karate-dark text-lg mb-6 max-w-2xl font-japanese font-light">
-              Stay updated with our latest karate events and rank evaluations.
+              Join us for intensive training and elevate your martial arts journey!
             </p>
           </div>
           <div className="w-32 h-32 float-3d">
@@ -59,125 +66,187 @@ const EventSection = () => {
           </div>
         </div>
 
-        {/* Featured Event Card */}
-        <div className="max-w-6xl mx-auto bg-white rounded-2xl shadow-3d-hover overflow-hidden border-2 border-karate-gold card-3d glass-strong">
-          <div className="bg-gradient-to-r from-karate-red to-karate-navy text-white p-6">
-            <div className="flex items-center justify-between">
-              <h3 className="text-2xl md:text-3xl font-bold font-japanese">
-                Karate Rank Evaluation Event
-              </h3>
-              <div className="bg-karate-gold text-karate-black px-4 py-2 rounded-full font-bold">
-                UPCOMING
+        {/* Featured Event Card - Training Camp */}
+        <div className="max-w-6xl mx-auto bg-white rounded-2xl shadow-3d-hover overflow-hidden border-4 border-karate-gold card-3d glass-strong relative">
+          {/* Highlight Badge */}
+          <div className="absolute -top-3 -right-3 z-20 bg-karate-red text-white px-6 py-3 rounded-full font-bold text-sm shadow-lg animate-pulse">
+            ⭐ FEATURED
+          </div>
+          
+          <div className="bg-gradient-to-r from-karate-red via-karate-navy to-karate-red text-white p-8 relative overflow-hidden">
+            <div className="absolute inset-0 opacity-20">
+              <div className="absolute top-0 left-0 w-40 h-40 bg-karate-gold rounded-full blur-3xl"></div>
+              <div className="absolute bottom-0 right-0 w-40 h-40 bg-white rounded-full blur-3xl"></div>
+            </div>
+            <div className="relative z-10">
+              <div className="flex items-center justify-between flex-wrap gap-4">
+                <h3 className="text-3xl md:text-4xl font-bold font-japanese">
+                  🥋 Shotokan Karate Training Camp 2025
+                </h3>
+                <div className="bg-karate-gold text-karate-black px-6 py-3 rounded-full font-bold text-lg shadow-lg">
+                  UPCOMING
+                </div>
               </div>
+              <p className="text-karate-gold font-semibold text-lg mt-4">
+                Presented by: International Shotokan Karate Institute – India (ISKI)
+              </p>
             </div>
           </div>
 
-          <div className="p-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {/* Event Details */}
-              <div className="space-y-6">
-                <div className="flex items-center space-x-3">
-                  <Calendar className="text-karate-red h-6 w-6" />
-                  <div>
-                    <p className="font-semibold text-karate-dark">Event Date</p>
-                    <p className="text-lg text-karate-navy font-bold">June 15, 2025</p>
-                  </div>
-                </div>
+          <div className="p-8 bg-gradient-to-br from-white to-karate-lightgold/10">
+            {/* Key Info Banner */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+              <div className="bg-gradient-to-br from-karate-red/10 to-karate-red/20 p-4 rounded-xl border-2 border-karate-red text-center">
+                <Calendar className="text-karate-red h-8 w-8 mx-auto mb-2" />
+                <p className="font-semibold text-karate-dark text-sm">Date</p>
+                <p className="text-xl text-karate-navy font-bold">Sunday, 23rd November 2025</p>
+              </div>
+              <div className="bg-gradient-to-br from-karate-gold/10 to-karate-gold/20 p-4 rounded-xl border-2 border-karate-gold text-center">
+                <Award className="text-karate-gold h-8 w-8 mx-auto mb-2" />
+                <p className="font-semibold text-karate-dark text-sm">Level</p>
+                <p className="text-xl text-karate-navy font-bold">Intermediate & Advanced</p>
+              </div>
+              <div className="bg-gradient-to-br from-karate-navy/10 to-karate-navy/20 p-4 rounded-xl border-2 border-karate-navy text-center">
+                <MapPin className="text-karate-navy h-8 w-8 mx-auto mb-2" />
+                <p className="font-semibold text-karate-dark text-sm">Venue</p>
+                <p className="text-xl text-karate-navy font-bold">To be announced soon!</p>
+              </div>
+            </div>
 
-                <div className="flex items-center space-x-3">
-                  <Clock className="text-karate-red h-6 w-6" />
-                  <div>
-                    <p className="font-semibold text-karate-dark">Time</p>
-                    <p className="text-lg text-karate-navy font-bold">8:00 AM to 10:00 AM</p>
-                  </div>
-                </div>
+            {/* About Section */}
+            <div className="bg-gradient-to-r from-karate-gold/20 to-karate-red/10 p-6 rounded-xl mb-8 border-l-4 border-karate-gold">
+              <h4 className="font-bold text-karate-navy mb-3 text-2xl flex items-center gap-2">
+                <Target className="h-6 w-6" /> 🔥 About the Camp
+              </h4>
+              <p className="text-karate-dark leading-relaxed text-lg">
+                Get ready for an intensive one-day Shotokan Karate Training Camp designed to boost your strength, technique, and discipline. Led by expert instructors, this camp focuses on both traditional and modern karate skills aligned with new WKF rules.
+              </p>
+              <p className="text-karate-navy font-semibold mt-3 text-lg">
+                This is a golden opportunity for karatekas to refine their techniques, enhance fighting skills, and build teamwork and confidence.
+              </p>
+            </div>
 
-                <div className="flex items-start space-x-3">
-                  <MapPin className="text-karate-red h-6 w-6 mt-1" />
-                  <div>
-                    <p className="font-semibold text-karate-dark mb-2">Event Location</p>
-                    <div className="bg-karate-lightgold/20 p-4 rounded-lg border-l-4 border-karate-gold">
-                      <p className="font-bold text-karate-navy text-lg mb-2">Cobra Thai</p>
-                      <p className="text-karate-dark">
-                        Shop no 19/1, old 242, N 879, Lane,<br />
-                        opposite to Reliance Mart,<br />
-                        Tukaram Nagar, Kharadi, Pune,<br />
-                        Maharashtra 411014
-                      </p>
-                    </div>
-                  </div>
+            {/* Schedule Highlights */}
+            <div className="mb-8">
+              <h4 className="font-bold text-karate-navy mb-4 text-2xl flex items-center gap-2">
+                <Clock className="h-6 w-6 text-karate-red" /> 🕒 Schedule Highlights
+              </h4>
+              <div className="space-y-3">
+                <div className="bg-white p-4 rounded-lg border-l-4 border-karate-red shadow-md">
+                  <p className="font-bold text-karate-red">07:30 AM – Arrival</p>
                 </div>
-
-                <div className="bg-gradient-to-r from-karate-gold/20 to-karate-red/10 p-6 rounded-lg">
-                  <h4 className="font-bold text-karate-navy mb-3 text-lg">Event Highlights:</h4>
-                  <ul className="space-y-2 text-karate-dark">
-                    <li className="flex items-center">
-                      <span className="w-2 h-2 bg-karate-red rounded-full mr-3"></span>
-                      Belt rank evaluation and promotion ceremony
-                    </li>
-                    <li className="flex items-center">
-                      <span className="w-2 h-2 bg-karate-red rounded-full mr-3"></span>
-                      Technical skills assessment
-                    </li>
-                    <li className="flex items-center">
-                      <span className="w-2 h-2 bg-karate-red rounded-full mr-3"></span>
-                      Kata performance demonstration
-                    </li>
-                    <li className="flex items-center">
-                      <span className="w-2 h-2 bg-karate-red rounded-full mr-3"></span>
-                      Certificate distribution
-                    </li>
-                  </ul>
+                <div className="bg-white p-4 rounded-lg border-l-4 border-karate-gold shadow-md">
+                  <p className="font-bold text-karate-navy">08:00 AM – 1st Training Session (2 hrs)</p>
+                  <p className="text-karate-dark ml-4">• Warm-up Drills & Nunchaku Training</p>
+                </div>
+                <div className="bg-white p-4 rounded-lg border-l-4 border-karate-navy shadow-md">
+                  <p className="font-bold text-karate-navy">10:00 AM – Short Break + Fun Activity</p>
+                </div>
+                <div className="bg-white p-4 rounded-lg border-l-4 border-karate-gold shadow-md">
+                  <p className="font-bold text-karate-navy">10:30 AM – 2nd Training Session (2 hrs)</p>
+                  <p className="text-karate-dark ml-4">• Kumite (Fight) Training as per new WKF Rules</p>
+                </div>
+                <div className="bg-white p-4 rounded-lg border-l-4 border-karate-navy shadow-md">
+                  <p className="font-bold text-karate-navy">12:30 PM – Lunch + Self-Confidence & Team-Building Talk</p>
+                </div>
+                <div className="bg-white p-4 rounded-lg border-l-4 border-karate-gold shadow-md">
+                  <p className="font-bold text-karate-navy">01:30 PM – 3rd Training Session (2 hrs)</p>
+                  <p className="text-karate-dark ml-4">• Kata's Bunkai Training</p>
+                  <p className="text-karate-dark ml-4">• Self Defense (Road Fight Techniques)</p>
+                </div>
+                <div className="bg-white p-4 rounded-lg border-l-4 border-karate-navy shadow-md">
+                  <p className="font-bold text-karate-navy">03:30 PM – Break + Group Games</p>
+                </div>
+                <div className="bg-white p-4 rounded-lg border-l-4 border-karate-gold shadow-md">
+                  <p className="font-bold text-karate-navy">04:00 PM – 4th Training Session (2 hrs)</p>
+                  <p className="text-karate-dark ml-4">• Stick Fight Training</p>
+                </div>
+                <div className="bg-white p-4 rounded-lg border-l-4 border-karate-navy shadow-md">
+                  <p className="font-bold text-karate-navy">06:00 PM – Break + Discipline & Focus Drills</p>
+                </div>
+                <div className="bg-white p-4 rounded-lg border-l-4 border-karate-gold shadow-md">
+                  <p className="font-bold text-karate-navy">06:30 PM – 5th Training Session (45 mins)</p>
+                  <p className="text-karate-dark ml-4">• Kumite (Fight) Training</p>
+                </div>
+                <div className="bg-white p-4 rounded-lg border-l-4 border-karate-red shadow-md">
+                  <p className="font-bold text-karate-red">07:30 PM – Departure</p>
                 </div>
               </div>
+            </div>
 
-              {/* Event Poster and Actions */}
-              <div className="space-y-6">
-                <div className="text-center">
-                  <div 
-                    className="relative cursor-pointer group"
-                    onClick={() => setShowPoster(true)}
-                  >
-                    <img 
-                      src="/lovable-uploads/93fc3e57-302f-41db-a898-02b1faf7f3d2.png"
-                      alt="Karate Rank Evaluation Event Poster"
-                      className="w-full max-w-md mx-auto rounded-lg shadow-3d-hover border-2 border-karate-gold hover:scale-110 transition-all duration-500 card-3d"
-                      style={{ transform: 'translateZ(20px)' }}
-                    />
-                    <div className="absolute inset-0 bg-karate-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
-                      <Image className="text-white h-8 w-8" />
-                    </div>
-                  </div>
-                  <p className="text-sm text-karate-dark mt-2">Click to view full poster</p>
-                </div>
+            {/* Why Join */}
+            <div className="bg-gradient-to-r from-karate-navy/10 to-karate-red/10 p-6 rounded-xl mb-8 border-l-4 border-karate-navy">
+              <h4 className="font-bold text-karate-navy mb-4 text-2xl flex items-center gap-2">
+                <Sword className="h-6 w-6" /> 💪 Why Join?
+              </h4>
+              <ul className="space-y-3 text-karate-dark text-lg">
+                <li className="flex items-start gap-3">
+                  <span className="text-2xl">✅</span>
+                  <span>Learn new WKF-compliant Kumite rules</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-2xl">✅</span>
+                  <span>Hands-on training in Nunchaku, Stick Fight & Self Defense</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-2xl">✅</span>
+                  <span>Enhance discipline, focus, and confidence</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-2xl">✅</span>
+                  <span>Build team spirit with fellow martial artists</span>
+                </li>
+              </ul>
+            </div>
 
-                <div className="bg-karate-navy text-white p-4 rounded-lg text-center">
-                  <p className="font-semibold mb-2">Registration Required</p>
-                  <p className="text-sm">Contact Sensei Rizwan Shaikh for participation details</p>
-                  <p className="text-karate-gold font-bold">+91 76202 38222</p>
-                </div>
-              </div>
+            {/* Contact Info */}
+            <div className="bg-gradient-to-r from-karate-red to-karate-navy text-white p-6 rounded-xl text-center shadow-lg">
+              <Users className="h-10 w-10 mx-auto mb-3" />
+              <p className="font-bold text-xl mb-2">📢 Registration & Inquiries</p>
+              <p className="text-karate-gold text-lg mb-2">Venue details will be announced soon!</p>
+              <p className="text-sm mb-1">Contact your ISKI instructor or visit our official website/social pages.</p>
+              <p className="text-karate-gold font-bold text-lg">Sensei Rizwan Shaikh: +91 76202 38222</p>
             </div>
           </div>
         </div>
 
-        {/* Additional Information */}
+        {/* Important Notes */}
         <div className="mt-12 text-center">
-          <div className="bg-gradient-to-r from-karate-gold/10 to-karate-red/10 p-6 rounded-lg max-w-4xl mx-auto border border-karate-gold">
-            <h4 className="text-xl font-bold text-karate-navy mb-4">Important Notes</h4>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
+          <div className="bg-gradient-to-r from-karate-gold/20 to-karate-red/20 p-8 rounded-xl max-w-4xl mx-auto border-4 border-karate-gold shadow-2xl">
+            <h4 className="text-2xl font-bold text-karate-navy mb-6 flex items-center justify-center gap-2">
+              <Award className="h-7 w-7" /> Important Notes for Participants
+            </h4>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
               <div>
-                <ul className="space-y-2 text-karate-dark">
-                  <li>• Students must arrive 15 minutes before their scheduled time</li>
-                  <li>• Proper karate gi (uniform) is mandatory</li>
-                  <li>• Bring your current belt and student ID</li>
+                <ul className="space-y-3 text-karate-dark text-lg">
+                  <li className="flex items-start gap-2">
+                    <span className="text-karate-red font-bold">•</span>
+                    <span>Proper karate gi (uniform) is mandatory</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-karate-red font-bold">•</span>
+                    <span>Bring your current belt and student ID</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-karate-red font-bold">•</span>
+                    <span>Stay hydrated - bring water bottle</span>
+                  </li>
                 </ul>
               </div>
               <div>
-                <ul className="space-y-2 text-karate-dark">
-                  <li>• Parents/guardians are welcome to attend</li>
-                  <li>• Photography will be available for certificate ceremony</li>
-                  <li>• Refreshments will be provided after the event</li>
+                <ul className="space-y-3 text-karate-dark text-lg">
+                  <li className="flex items-start gap-2">
+                    <span className="text-karate-red font-bold">•</span>
+                    <span>Parents/guardians are welcome to attend</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-karate-red font-bold">•</span>
+                    <span>Photography and videography available</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-karate-red font-bold">•</span>
+                    <span>Lunch and refreshments included</span>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -186,16 +255,16 @@ const EventSection = () => {
 
         {/* Poster Modal */}
         <Dialog open={showPoster} onOpenChange={setShowPoster}>
-          <DialogContent className="max-w-4xl w-[90vw] border-2 border-karate-gold">
+          <DialogContent className="max-w-4xl w-[90vw] border-4 border-karate-gold">
             <div className="relative">
               <img 
                 src="/lovable-uploads/93fc3e57-302f-41db-a898-02b1faf7f3d2.png"
-                alt="Karate Rank Evaluation Event Poster"
+                alt="Shotokan Karate Training Camp 2025 Poster"
                 className="w-full h-auto rounded border-2 border-karate-gold"
               />
               <div className="mt-4 bg-gradient-to-r from-karate-gold/20 to-karate-red/10 p-4 rounded-lg">
                 <p className="text-lg font-medium font-japanese text-karate-black text-center">
-                  Karate Rank Evaluation - June 15, 2025 at Cobra Thai, Kharadi
+                  🥋 Shotokan Karate Training Camp 2025 - November 23, 2025
                 </p>
               </div>
               <DialogClose asChild>
