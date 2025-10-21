@@ -103,13 +103,20 @@ const HeroSection = () => {
 
         {/* Title Section - Centered */}
         <div className="mb-6 relative animate-fadeInUp text-center" style={{animationDelay: '0.9s'}}>
-          <h1 className="text-4xl md:text-6xl font-bold text-karate-black mb-6 font-japanese">
+          <h1 className="text-4xl md:text-6xl font-bold text-karate-gold mb-6 font-japanese"
+            style={{
+              textShadow: '0 4px 16px rgba(0,0,0,0.9), 0 2px 8px rgba(0,0,0,0.8), 0 0 40px rgba(251, 191, 36, 0.6)'
+            }}>
             The Karate Gakusei Dojo
           </h1>
         </div>
 
         {/* Mission Statement - Centered */}
-        <p className="text-xl md:text-2xl mb-8 text-karate-dark max-w-3xl mx-auto font-japanese font-light animate-fadeInUp text-center" style={{animationDelay: '1.2s'}}>
+        <p className="text-xl md:text-2xl mb-8 text-white max-w-3xl mx-auto font-japanese font-light animate-fadeInUp text-center" 
+          style={{
+            animationDelay: '1.2s',
+            textShadow: '0 3px 12px rgba(0,0,0,0.9), 0 1px 6px rgba(0,0,0,0.8), 0 0 30px rgba(0,0,0,0.5)'
+          }}>
           Our mission is to train students in the art of traditional Shotokan Karate. 
           We don't fight to hurt — we train to grow stronger, sharper, and more confident.
         </p>
