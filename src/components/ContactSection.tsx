@@ -48,7 +48,7 @@ const ContactSection = () => {
     e.preventDefault();
     
     if (validateForm()) {
-      const message = `Hello Sensei Rizwan,%0AMy name is ${formData.name}. I am ${formData.age} years old and interested in joining The Karate Gakusei Dojo.%0AHere are my details:%0AEmail: ${formData.email}%0APhone: ${formData.phone}%0ALooking forward to learning Shotokan Karate!`;
+      const message = `Hello Sensei Rizwan,%0AMy name is ${encodeURIComponent(formData.name)}. I am ${encodeURIComponent(formData.age)} years old and interested in joining The Karate Gakusei Dojo.%0AHere are my details:%0AEmail: ${encodeURIComponent(formData.email)}%0APhone: ${encodeURIComponent(formData.phone)}%0ALooking forward to learning Shotokan Karate!`;
       const whatsappURL = `https://wa.me/917620238222?text=${message}`;
       
       toast({
