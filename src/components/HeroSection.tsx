@@ -3,15 +3,18 @@ import { useState, useEffect } from "react";
 import trainingImage1 from "@/assets/karate-training-1.jpg";
 import trainingImage2 from "@/assets/karate-training-2.jpg";
 import trainingImage3 from "@/assets/karate-training-3.jpg";
+import competitionPodium from "@/assets/competition-podium.jpg";
+import studentTraining from "@/assets/student-training.jpg";
+import groupPhoto from "@/assets/group-photo.jpg";
 
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const images = [trainingImage1, trainingImage2, trainingImage3];
+  const images = [trainingImage1, trainingImage2, trainingImage3, competitionPodium, studentTraining, groupPhoto];
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % images.length);
-    }, 30000); // Change every 30 seconds
+    }, 5000); // Change every 5 seconds
 
     return () => clearInterval(interval);
   }, [images.length]);
