@@ -47,7 +47,8 @@ const Footer = () => {
             <p className="text-sm text-karate-lightgold font-medium drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
               &copy; {currentYear} The Karate Gakusei Dojo<br />
               Designed with spirit and discipline<br />
-              Made by B2Csolution Company (Om Harde)
+              Made by B2Csolution Company (Om Harde)<br />
+              9882303030
             </p>
           </div>
         </div>
