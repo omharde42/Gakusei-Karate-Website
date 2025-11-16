@@ -48,7 +48,7 @@ const Footer = () => {
               &copy; {currentYear} The Karate Gakusei Dojo<br />
               Designed with spirit and discipline<br />
               Made by B2Csolution Company (Om Harde)<br />
-              9882303030
+              <a href="tel:+919882303030" className="hover:text-karate-gold transition-colors">9882303030</a>
             </p>
           </div>
         </div>
