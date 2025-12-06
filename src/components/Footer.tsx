@@ -24,7 +24,17 @@ const Footer = () => {
             boxShadow: '0 8px 20px rgba(0,0,0,0.6), inset 0 1px 0 rgba(251,191,36,0.2)'
           }}>
             <h4 className="text-xl font-bold mb-3 text-karate-gold">Contact</h4>
-            <p className="text-karate-lightgold font-semibold">Sensei Rizwan Shaikh: +91 7620238222</p>
+            <p className="text-karate-lightgold font-semibold">
+              Sensei Rizwan Shaikh:{" "}
+              <a 
+                href="https://wa.me/917620238222" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:text-karate-gold transition-colors"
+              >
+                +91 7620238222
+              </a>
+            </p>
           </div>
           
           <div className="text-center md:text-right transform hover:scale-105 transition-transform duration-300" style={{ transform: 'translateZ(30px)' }}>
