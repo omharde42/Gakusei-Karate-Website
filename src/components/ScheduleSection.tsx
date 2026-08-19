@@ -47,26 +47,21 @@ const ScheduleSection = () => {
                     </div>
                   </div>
 
-                  {/* Vidhyavan Location */}
+                  {/* Sunrise Kids School Location */}
                   <div>
-                    <h5 className="text-lg font-bold text-karate-red mb-3">📍 Vidhyavan Montessori</h5>
-                    <p className="text-sm text-karate-dark mb-3">Vidhyavan Montessori Preschool and Daycare, Lonikand</p>
+                    <h5 className="text-lg font-bold text-karate-red mb-3">📍 Sunrise Kids School</h5>
+                    <p className="text-sm text-karate-dark mb-3">Gade Wasti, Wagholi</p>
                     
                     <div className="space-y-3">
-                      <div className="flex justify-between items-center bg-white p-3 rounded shadow">
-                        <span className="font-bold text-karate-black">Monday</span>
-                        <span className="text-karate-red font-semibold">7:00 PM - 8:00 PM</span>
-                      </div>
-                      <div className="flex justify-between items-center bg-white p-3 rounded shadow">
-                        <span className="font-bold text-karate-black">Wednesday</span>
-                        <span className="text-karate-red font-semibold">7:00 PM - 8:00 PM</span>
-                      </div>
-                      <div className="flex justify-between items-center bg-white p-3 rounded shadow">
-                        <span className="font-bold text-karate-black">Friday</span>
-                        <span className="text-karate-red font-semibold">7:00 PM - 8:00 PM</span>
-                      </div>
+                      {["Monday", "Wednesday", "Friday"].map((day) => (
+                        <div key={day} className="flex justify-between items-center bg-white p-3 rounded shadow transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0">
+                          <span className="font-bold text-karate-black">{day}</span>
+                          <span className="text-karate-red font-semibold">7:00 PM - 8:00 PM</span>
+                        </div>
+                      ))}
                     </div>
                   </div>
+
                 </div>
                 
                 {/* Kickboxing Training */}
@@ -100,6 +95,22 @@ const ScheduleSection = () => {
                       </div>
                     </div>
                   </div>
+
+                  {/* Sunrise Kids School Kickboxing */}
+                  <div>
+                    <h5 className="text-lg font-bold text-karate-darkgold mb-3">📍 Sunrise Kids School</h5>
+                    <p className="text-sm text-karate-dark mb-3">Gade Wasti, Wagholi</p>
+
+                    <div className="space-y-3">
+                      {["Tuesday", "Thursday"].map((day) => (
+                        <div key={day} className="flex justify-between items-center bg-white p-3 rounded shadow transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0">
+                          <span className="font-bold text-karate-black">{day}</span>
+                          <span className="text-karate-darkgold font-semibold">4:30 PM - 5:30 PM</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
                 </div>
               </div>
               
