@@ -98,8 +98,8 @@ const ScheduleSection = () => {
 
                   {/* Sunrise Kids School Kickboxing */}
                   <div>
-                    <h5 className="text-lg font-bold text-karate-darkgold mb-3">📍 Sunrise Kids School</h5>
-                    <p className="text-sm text-karate-dark mb-3">Gade Wasti, Wagholi</p>
+                    <h5 className="text-lg font-bold text-karate-darkgold mb-3">📍 Cobra Thai Extra Session</h5>
+                    <p className="text-sm text-karate-dark mb-3">Shop no 19/1, old 242, N 879, Lane, opposite to Reliance Mart, Tukaram Nagar, Kharadi, Pune, Maharashtra 411014</p>
 
                     <div className="space-y-3">
                       {["Tuesday", "Thursday"].map((day) => (
