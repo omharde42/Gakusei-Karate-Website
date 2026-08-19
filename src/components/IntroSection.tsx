@@ -95,9 +95,7 @@ const IntroSection = () => {
               </div>
               
               <p className="text-karate-dark text-lg leading-relaxed">
-                Master instructor with years of experience in traditional karate. 
-                Dedicated to preserving the authentic spirit of martial arts while 
-                inspiring the next generation of karate practitioners.
+                Rizwan is a 2nd Dan Black Belt and a decorated martial arts champion with nine major titles to his name, including four Maharashtra State Kickboxing Championships and the role of District Coach for Pune City. With over a decade of dedicated training and seven years of experience coaching both kids and adults, he bridges the gap between modern competition and traditional martial arts. As a master instructor, Rizwan is dedicated to preserving the authentic spirit of traditional karate while specializing in elite technique development and competition prep. His ultimate mission is to inspire the next generation of fighters by building unwavering confidence and discipline on and off the mat.
               </p>
             </div>
           </div>
