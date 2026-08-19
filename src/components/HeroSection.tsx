@@ -39,7 +39,7 @@ const HeroSection = () => {
         {images.map((image, index) => (
           <div
             key={index}
-            className={`absolute inset-0 transition-all duration-2000 ease-in-out ${
+            className={`absolute inset-0 transition-opacity duration-[2000ms] ease-in-out motion-reduce:transition-none ${
               index === currentSlide 
                 ? 'opacity-100 scale-100' 
                 : 'opacity-0 scale-105'
